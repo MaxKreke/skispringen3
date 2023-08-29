@@ -11,6 +11,7 @@ public class Movement : MonoBehaviour
     public float speed = 1;
     public LayerMask GroundLayers;
     public Camera ownCamera;
+    public Vector3 respawn;
 
     void Start()
     {
@@ -24,6 +25,7 @@ public class Movement : MonoBehaviour
         if (grounded)Move();
         else Move(true);
         ClampSpeed();
+        DeathCheck();
         
     }
 
@@ -133,6 +135,11 @@ public class Movement : MonoBehaviour
         if (ratio > 1) modifiedVelocity /= ratio;
         modifiedVelocity = new Vector3(modifiedVelocity.x, velocity.y, modifiedVelocity.z);
         body.velocity = modifiedVelocity;
+    }
+
+    private void DeathCheck()
+    {
+        if (transform.position.y < -100) transform.position = respawn;
     }
 
 }
