@@ -8,10 +8,11 @@ public class Sword : MonoBehaviour
     private int animationSpeed = 18;
     private Vector2 dif;
     private float slashWidth = 2f;
+    private bool attack;
 
     void Start()
     {
-        
+        attack = false;
     }
 
 
@@ -26,6 +27,7 @@ public class Sword : MonoBehaviour
         {
             RandomUnitVector();
             animationFrames = Mathf.RoundToInt(slashWidth * animationSpeed);
+            attack = true;
         }
     }
 
@@ -40,7 +42,14 @@ public class Sword : MonoBehaviour
         if (dif.y > 0) rot = -rot;
         transform.localEulerAngles = new Vector3(0, 0, rot);
         transform.localPosition = new Vector3(pos.x, pos.y, 1.2f);
-        Debug.Log(focus);
+        //Debug.Log(focus);
+    }
+
+    public void hitEnemy(Enemy enemy)
+    {
+        if (!attack) return;
+        enemy.Bleed(10f);
+        attack= false;
     }
 
 }

@@ -11,21 +11,10 @@ public class SlashEnemy : MonoBehaviour
     {
         if (other.gameObject.tag == "Enemy")
         {
-            //t.finalMessage();
-            //Debug.Log("you win!");
+            Enemy enemy = other.gameObject.GetComponent<Enemy>();
+            sword.hitEnemy(enemy);
         }
 
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
