@@ -171,7 +171,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentAdult: {fileID: 2019640239}
-  ownCamera: {fileID: 0}
+  ownCamera: {fileID: 963194227}
+  boxLayers:
+    serializedVersion: 2
+    m_Bits: 1
 --- !u!120 &153039575
 LineRenderer:
   m_ObjectHideFlags: 0

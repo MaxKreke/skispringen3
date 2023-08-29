@@ -11,6 +11,8 @@ public class Grapplendix : MonoBehaviour
     private SpringJoint joint;
     public GameObject parentAdult;
     public Camera ownCamera;
+    public LayerMask boxLayers;
+    private float maximalDistanz = 150f;
 
     void Start()
     {
@@ -28,10 +30,10 @@ public class Grapplendix : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
-            //if (Physics.Raycast(transform.position, ownCamera.transform.TransformDirection(Vector3.forward), out hit, maximalDistanz, boxLayers))
-            //{
+            if (Physics.Raycast(transform.position, ownCamera.transform.TransformDirection(Vector3.forward), out hit, maximalDistanz, boxLayers))
+            {
 
-            //}
+            }
         }
     }
 
