@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    private static float maxSpeed = 25;
     private Rigidbody body;
     public bool grounded = false;
     public float jumpforce = 10;
@@ -11,18 +12,19 @@ public class Movement : MonoBehaviour
     public LayerMask GroundLayers;
     public Camera ownCamera;
 
-    // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         JumpAndGravity();
         GroundedCheck();
-        if(grounded)Move();
+        if (grounded)Move();
+        else Move(true);
+        ClampSpeed();
+        
     }
 
     private void JumpAndGravity()
@@ -38,7 +40,7 @@ public class Movement : MonoBehaviour
         grounded = Physics.CheckSphere(transform.position, .6f, GroundLayers);
     }
 
-    private void Move()
+    private void Move(bool air = false)
     {
         float horizontalRotation = ownCamera.GetComponent<CameraRotation>().horizontalRotation;
         Vector3 force = Vector3.zero;
@@ -69,16 +71,22 @@ public class Movement : MonoBehaviour
                 force = (Vector3.left + Vector3.forward).normalized * speed;
                 break;
             default:
+                if(!air)body.velocity /= 1.1f;
                 break;
         }
         Vector3 dir = Quaternion.AngleAxis(horizontalRotation, Vector3.up) * Vector3.forward;
         Vector3 rotatedForce = Quaternion.AngleAxis(horizontalRotation, Vector3.up) * force;
+
+        float horizontalVelocity = new Vector2(body.velocity.x, body.velocity.z).magnitude;
+        if (horizontalVelocity < 10) horizontalVelocity *= 2.5f;
+
         float currentSpeed = Vector3.ProjectOnPlane(body.velocity, Vector3.up).magnitude;
         float relativeSpeed = Vector3.Dot(rotatedForce, body.velocity);
         if (force != Vector3.zero)
         {
             body.velocity = Vector3.ClampMagnitude(rotatedForce.normalized * (currentSpeed + relativeSpeed) / 2, 150) + body.velocity.y * Vector3.up;
-            body.AddForce(rotatedForce * 8);
+            if(!air)body.AddForce(rotatedForce * 8);
+
         }
     }
 
@@ -116,4 +124,15 @@ public class Movement : MonoBehaviour
         if (!right && left) return 6;
         return -1;
     }
+
+    private void ClampSpeed()
+    {
+        Vector3 velocity = body.velocity;
+        Vector3 modifiedVelocity = Vector3.ProjectOnPlane(velocity, Vector3.up);
+        float ratio = modifiedVelocity.magnitude / maxSpeed;
+        if (ratio > 1) modifiedVelocity /= ratio;
+        modifiedVelocity = new Vector3(modifiedVelocity.x, velocity.y, modifiedVelocity.z);
+        body.velocity = modifiedVelocity;
+    }
+
 }
