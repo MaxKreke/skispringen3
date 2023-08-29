@@ -5,10 +5,7 @@ using UnityEngine;
 public class Terminal : MonoBehaviour
 {
     public GameObject activeLevel;
-    public GameObject Level1;
-    public GameObject Level2;
-    public GameObject Level3;
-    public GameObject Level4;
+    public GameObject [] Levels;
 
     void Start()
     {
@@ -17,5 +14,17 @@ public class Terminal : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
 
         Application.targetFrameRate = 120;
+    }
+
+    public void SelectActiveLevel(GameObject level)
+    {
+        activeLevel = level;
+        foreach(GameObject levelNumber in Levels)
+        {
+            if(level != levelNumber)
+            {
+                levelNumber.GetComponent<Level>().Woosh();
+            }
+        }
     }
 }
