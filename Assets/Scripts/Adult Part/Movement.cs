@@ -88,6 +88,7 @@ public class Movement : MonoBehaviour
         {
             body.velocity = Vector3.ClampMagnitude(rotatedForce.normalized * (currentSpeed + relativeSpeed) / 2, 150) + body.velocity.y * Vector3.up;
             if(!air)body.AddForce(rotatedForce * 8);
+            else body.AddForce(rotatedForce * .5f);
 
         }
     }
