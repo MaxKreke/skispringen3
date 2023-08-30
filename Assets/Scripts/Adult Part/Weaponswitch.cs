@@ -6,7 +6,7 @@ using UnityEngine;
 public class Weaponswitch : MonoBehaviour
 {
     public int defaultWeapon = 0;
-    public GameObject hand;
+    public GameObject [] hand;
     public GameObject[] Sword;
     public bool handUnlocked;
     public bool blastUnlocked;
@@ -48,7 +48,8 @@ public class Weaponswitch : MonoBehaviour
             Sword[1].SetActive(display);
         } else if (defaultWeapon == 1)
         {
-            hand.SetActive(display);
+            hand[0].SetActive(display);
+            hand[1].SetActive(display);
         }
             
     }

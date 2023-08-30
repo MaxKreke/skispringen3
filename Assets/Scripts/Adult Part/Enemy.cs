@@ -35,7 +35,7 @@ public class Enemy : MonoBehaviour
             Debug.Log($"HP = {HP}");
             changeMaterial(damageMaterial);
         }
-        if (HP == 0)
+        if (HP <= 0)
         {
             Debug.Log("aa i am ded");
             this.gameObject.SetActive(false);
