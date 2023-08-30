@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2056563815088195971}
   - component: {fileID: 2056563815088195968}
   m_Layer: 11
-  m_Name: Pebble
+  m_Name: Chaos Blast
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 2056563815088195960}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -1, z: 4}
-  m_LocalScale: {x: 0.025, y: 0.025, z: 0.025}
+  m_LocalScale: {x: 0.06, y: 0.06, z: 0.06}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 0}
-  ChaosPower: 1
+  ChaosPower: 150
 --- !u!135 &2056563815088195971
 SphereCollider:
   m_ObjectHideFlags: 0

@@ -31,6 +31,7 @@ public class Projectile : MonoBehaviour
 
 
     }
+
     private void Update()
     {
         gameObject.transform.position += direction;

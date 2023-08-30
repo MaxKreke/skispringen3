@@ -7,10 +7,12 @@ public class CameraRotation : MonoBehaviour
     public float mouseSensitivity = 2;
     public float verticalRotation = 0;
     public float horizontalRotation = 0;
+    public GameObject parentAdult;
 
     private void Update()
     {
         RotateCamera();
+        transform.position = parentAdult.transform.position+Vector3.up/2;
     }
 
     public void RotateCamera()

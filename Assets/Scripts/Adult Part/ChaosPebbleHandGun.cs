@@ -6,20 +6,30 @@ public class ChaosPebbleHandGun : MonoBehaviour
 {
     private int animationFrames = 0;
     private int animationSpeed = 9;
-    public GameObject projectile;
+    public GameObject shot;
+    public GameObject blast;
     public Transform container;
     public float projectileSpeed = .2f;
 
     public LayerMask boxLayers;
+    public Weaponswitch ws;
     private float maximalDistanz = 60;
+    private bool isBlasting;
+    private GameObject projectile;
+
+    private void Start()
+    {
+        isBlasting = false;
+        projectile = shot;
+    }
 
     private void Update()
     {
         if (animationFrames != 0)animationFrames--;
         else if (Input.GetMouseButton(0))
         {
-            Shoot();
             animationFrames = Mathf.RoundToInt(animationSpeed);
+            Shoot();
         }
     }
 
@@ -35,7 +45,6 @@ public class ChaosPebbleHandGun : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward), out hit, maximalDistanz, boxLayers))
             {
-                Debug.Log(hit.point);
                 pInstance.direction = (hit.point-transform.position).normalized*projectileSpeed;
             } else
             {
@@ -43,6 +52,24 @@ public class ChaosPebbleHandGun : MonoBehaviour
 
             }
             pInstance.transform.SetParent(container);
+        }
+        if (isBlasting) ws.Switch(-1f);
+    }
+
+    public void Blastin(bool start)
+    {
+        isBlasting = start;
+        if (isBlasting)
+        {
+            projectile = blast;
+            projectileSpeed = .1f;
+            animationSpeed = 120;
+        }
+        else
+        {
+            projectile = shot;
+            projectileSpeed = .2f;
+            animationSpeed = 9;
         }
     }
 
