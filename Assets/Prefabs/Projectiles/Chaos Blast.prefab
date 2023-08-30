@@ -112,7 +112,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: {x: 0, y: 0, z: 0}
-  ChaosPower: 150
+  ChaosPower: 75
+  blast: 1
 --- !u!135 &2056563815088195971
 SphereCollider:
   m_ObjectHideFlags: 0

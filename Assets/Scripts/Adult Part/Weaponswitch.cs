@@ -15,7 +15,6 @@ public class Weaponswitch : MonoBehaviour
     {
         if(Input.mouseScrollDelta.y != 0)
         {
-            SetWeaponActive(false);
             if (!handUnlocked) return;
             Switch(Input.mouseScrollDelta.y);
         }
@@ -24,6 +23,7 @@ public class Weaponswitch : MonoBehaviour
 
     public void Switch(float delta)
     {
+        SetWeaponActive(false);
         int weaponCount = 2;
         if (blastUnlocked )weaponCount = 3;
         int roundedDelta = Mathf.RoundToInt(delta);
@@ -48,25 +48,20 @@ public class Weaponswitch : MonoBehaviour
             Sword[1].SetActive(display);
         } else if (defaultWeapon == 1)
         {
+            Debug.Log("defautWeapon");
             hand[0].SetActive(display);
             hand[1].SetActive(display);
             if (!display) return;
-            animation handimation = hand[1].GetComponent<animation>();
             ChaosPebbleHandGun gun = hand[0].GetComponent<ChaosPebbleHandGun>();
-            if (!handimation) return;
             if (!gun) return;
-            handimation.AnimationSpeed = 12;
             gun.Blastin(false);
         } else if (defaultWeapon == 2)
         {
             hand[0].SetActive(display);
-            hand[1].SetActive(display);
+            hand[2].SetActive(display);
             if (!display) return;
-            animation handimation = hand[1].GetComponent<animation>();
             ChaosPebbleHandGun gun = hand[0].GetComponent<ChaosPebbleHandGun>();
-            if (!handimation) return;
             if (!gun) return;
-            handimation.AnimationSpeed = 1;
             gun.Blastin(true);
         }
 
