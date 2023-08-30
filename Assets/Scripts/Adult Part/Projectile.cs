@@ -6,6 +6,7 @@ public class Projectile : MonoBehaviour
 {
     public Vector3 direction;
     public float ChaosPower = 1f;
+    private float maximalDistanz = 60;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -18,7 +19,7 @@ public class Projectile : MonoBehaviour
             }
             Destroy(gameObject);
         }
-        else if (other.gameObject.tag == "Default")
+        else if (other.gameObject.tag == "Untagged")
         {
             Destroy(gameObject);
         }
@@ -33,7 +34,7 @@ public class Projectile : MonoBehaviour
     private void Update()
     {
         gameObject.transform.position += direction;
-        if((Camera.main.gameObject.transform.position-gameObject.transform.position).magnitude > 60)
+        if((Camera.main.gameObject.transform.position-gameObject.transform.position).magnitude > maximalDistanz)
         {
             Destroy(gameObject);
         }

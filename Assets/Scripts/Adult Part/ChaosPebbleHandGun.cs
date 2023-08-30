@@ -8,6 +8,10 @@ public class ChaosPebbleHandGun : MonoBehaviour
     private int animationSpeed = 9;
     public GameObject projectile;
     public Transform container;
+    public float projectileSpeed = .2f;
+
+    public LayerMask boxLayers;
+    private float maximalDistanz = 60;
 
     private void Update()
     {
@@ -23,9 +27,21 @@ public class ChaosPebbleHandGun : MonoBehaviour
     {
         GameObject instance = Instantiate(projectile, transform.position, Quaternion.identity);
         Projectile pInstance = instance.GetComponent<Projectile>();
+
         if (pInstance != null)
         {
-            pInstance.direction = (Camera.main.gameObject.transform.rotation)*Vector3.forward/5;
+
+            //Check for shot direction
+            RaycastHit hit;
+            if (Physics.Raycast(Camera.main.transform.position, Camera.main.transform.TransformDirection(Vector3.forward), out hit, maximalDistanz, boxLayers))
+            {
+                Debug.Log(hit.point);
+                pInstance.direction = (hit.point-transform.position).normalized*projectileSpeed;
+            } else
+            {
+                pInstance.direction = (Camera.main.transform.rotation)*Vector3.forward*projectileSpeed;
+
+            }
             pInstance.transform.SetParent(container);
         }
     }
