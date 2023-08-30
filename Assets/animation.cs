@@ -18,7 +18,6 @@ public class animation : MonoBehaviour
         initID = 0;
         counter = 0;
         myTexture = GetComponent<RawImage>();
-        Debug.Log(myTexture.name);
     }
 
     // Update is called once per frame

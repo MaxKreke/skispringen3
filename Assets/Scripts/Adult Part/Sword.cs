@@ -9,7 +9,6 @@ public class Sword : MonoBehaviour
     private Vector2 dif;
     private float slashWidth = 2f;
     private bool attack;
-    public Mesh cube;
 
     void Start()
     {
@@ -28,13 +27,13 @@ public class Sword : MonoBehaviour
         {
             RandomUnitVector();
             animationFrames = Mathf.RoundToInt(slashWidth * animationSpeed);
-            GetComponent<MeshFilter>().sharedMesh = cube;
             attack = true;
         }
         else
         {
             attack = false;
-            GetComponent<MeshFilter>().sharedMesh = null;
+            transform.localPosition = new Vector3(-.75f, -0.3f, 1.2f);
+            transform.localEulerAngles = new Vector3(-20f, 0, 15f);
         }
     }
 
