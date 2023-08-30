@@ -9,11 +9,9 @@ public class LevelCollider : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject);
         if (other.gameObject.tag == "Character")
         {
-            Debug.Log("hi :)");
-            terminal.SelectActiveLevel(Level);
+            terminal.SelectActiveLevel(Level, other.gameObject);
         }
     }
 }

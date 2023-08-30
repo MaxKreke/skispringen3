@@ -5,6 +5,7 @@ using UnityEngine;
 public class Level : MonoBehaviour
 {
     public Vector3 direction;
+    public Vector3 spawnpoint;
     private int steps = 0;
 
     private void Update()
