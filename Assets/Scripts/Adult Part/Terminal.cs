@@ -27,4 +27,9 @@ public class Terminal : MonoBehaviour
             }
         }
     }
+
+    void OnGUI()
+    {
+        GUI.Label(new Rect(0, 0, 100, 100), (1.0f / Time.smoothDeltaTime).ToString());
+    }
 }
