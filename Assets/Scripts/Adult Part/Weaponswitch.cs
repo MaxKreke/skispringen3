@@ -48,7 +48,6 @@ public class Weaponswitch : MonoBehaviour
             Sword[1].SetActive(display);
         } else if (defaultWeapon == 1)
         {
-            Debug.Log("defautWeapon");
             hand[0].SetActive(display);
             hand[1].SetActive(display);
             if (!display) return;

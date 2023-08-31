@@ -1132,6 +1132,10 @@ MonoBehaviour:
   HP: 300
   defaultMaterial: {fileID: 2100000, guid: 3080fcc8bc79df04486b8164fd16124d, type: 2}
   damageMaterial: {fileID: 2100000, guid: 9e6684c9bf936f049ac43785d3f8fbb9, type: 2}
+  player: {fileID: 2019640239}
+  isAgressive: 0
+  isFlying: 0
+  isShooting: 0
 --- !u!1 &585537415
 GameObject:
   m_ObjectHideFlags: 0

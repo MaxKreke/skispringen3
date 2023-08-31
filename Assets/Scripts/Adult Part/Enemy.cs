@@ -7,13 +7,23 @@ public class Enemy : MonoBehaviour
     public int HP = 300;
     public Material defaultMaterial;
     public Material damageMaterial;
+    public GameObject target;
     private int damageDuration = 15;
     private int leftoverDuration;
+
+    public float movementSpeed;
+    public bool isAgressive = false;
+    public bool isFlying = false;
+    public bool isShooting = false;
+    public GameObject projectile;
+    public float shootingSpeed;
+    private float shootCooldown;
 
 
     private void Start()
     {
         leftoverDuration = 0;
+        shootCooldown = shootingSpeed;
     }
 
     private void Update()
@@ -23,6 +33,27 @@ public class Enemy : MonoBehaviour
             changeMaterial(defaultMaterial);
         }
         else leftoverDuration--;
+        if (isAgressive)
+        {
+            Vector3 dif;
+            if (!isFlying)
+            {
+                dif = target.transform.position - transform.position;
+                dif = new Vector3(dif.x, 0, dif.z);
+            }
+            else
+            {
+                dif = target.transform.position+Vector3.up*4 - transform.position;
+            }
+            dif.Normalize();
+            transform.position += dif * movementSpeed;
+            if (!isShooting) return;
+            if (shootCooldown <= 0)
+            {
+                FireShot();
+            }
+            else shootCooldown--;
+        }
     }
 
 
@@ -49,5 +80,16 @@ public class Enemy : MonoBehaviour
         if (renderer == null) return;
         renderer.material = mat;
         leftoverDuration = damageDuration;
+    }
+
+    private void FireShot()
+    {
+        GameObject instance = Instantiate(projectile, transform.position+Vector3.up*1.5f, Quaternion.identity);
+        Projectile pInstance = instance.GetComponent<Projectile>();
+        if (pInstance != null)
+        {
+            pInstance.direction = (target.transform.position - transform.position).normalized / 10;
+        }
+        shootCooldown = shootingSpeed;
     }
 }
