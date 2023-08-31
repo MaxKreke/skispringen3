@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
     {
         leftoverDuration = 0;
         shootCooldown = shootingSpeed;
+        target = GameObject.Find("Adult");
     }
 
     private void Update()

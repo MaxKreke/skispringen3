@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3037371058579538405}
   - component: {fileID: 3037371058579538406}
   - component: {fileID: 3037371058579538407}
-  - component: {fileID: 3037371058579538408}
+  - component: {fileID: -372316837713429206}
   m_Layer: 6
   m_Name: Aerial
   m_TagString: Enemy
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7f0a5596063e134895e35a61c4f36b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 300
+  HP: 200
   defaultMaterial: {fileID: 2100000, guid: a93580942db24d14b9b9f465321a7b98, type: 2}
   damageMaterial: {fileID: 2100000, guid: 42fd5bf589b2a5c4899c04576d2d2d40, type: 2}
   target: {fileID: 0}
@@ -106,8 +106,8 @@ MonoBehaviour:
   isAgressive: 1
   isFlying: 1
   isShooting: 1
-  projectile: {fileID: 2056563815088195960, guid: 580255e0fbcae0748a644923449a945a, type: 3}
-  shootingSpeed: 300
+  projectile: {fileID: 2056563815088195960, guid: 225e72bc458b6214abd33f73da5c3ec6, type: 3}
+  shootingSpeed: 200
 --- !u!114 &3037371058579538407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,8 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98173064deb3fbb4f864889d5c2b26e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &3037371058579538408
-SphereCollider:
+--- !u!65 &-372316837713429206
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -131,5 +131,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5.000001
+  m_Size: {x: 8, y: 5, z: 8}
   m_Center: {x: 0, y: 0, z: 0}

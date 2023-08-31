@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6177980573843148122}
   - component: {fileID: 6177980573843148123}
   - component: {fileID: 6177980573843148120}
-  - component: {fileID: 6177980573843148121}
+  - component: {fileID: 2069071689310622824}
   m_Layer: 6
   m_Name: Gunner
   m_TagString: Enemy
@@ -106,8 +106,8 @@ MonoBehaviour:
   isAgressive: 1
   isFlying: 0
   isShooting: 1
-  projectile: {fileID: 2056563815088195960, guid: 580255e0fbcae0748a644923449a945a, type: 3}
-  shootingSpeed: 200
+  projectile: {fileID: 2056563815088195960, guid: 0a95ba80fbfd67146881266f61d476e6, type: 3}
+  shootingSpeed: 100
 --- !u!114 &6177980573843148120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,8 +120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98173064deb3fbb4f864889d5c2b26e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!135 &6177980573843148121
-SphereCollider:
+--- !u!65 &2069071689310622824
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -131,5 +131,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5.000001
+  m_Size: {x: 10, y: 5, z: 8}
   m_Center: {x: 0, y: 0, z: 0}
