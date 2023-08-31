@@ -8,6 +8,8 @@ TagManager:
   - Character
   - Box
   - Projectile
+  - Grappleable
+  - ChaosSphincter
   layers:
   - Default
   - TransparentFX
