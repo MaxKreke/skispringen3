@@ -84,11 +84,15 @@ public class Enemy : MonoBehaviour
 
     private void FireShot()
     {
-        GameObject instance = Instantiate(projectile, transform.position+Vector3.up*1.5f, Quaternion.identity);
+        Vector3 shotPosition = transform.position;
+        if (isFlying) shotPosition -= Vector3.up * 1.5f;
+        else shotPosition += Vector3.up * 1.5f;
+
+        GameObject instance = Instantiate(projectile, shotPosition, Quaternion.identity);
         Projectile pInstance = instance.GetComponent<Projectile>();
         if (pInstance != null)
         {
-            pInstance.direction = (target.transform.position - transform.position).normalized / 10;
+            pInstance.direction = ((target.transform.position + Vector3.up*.3f)- shotPosition).normalized / 10;
         }
         shootCooldown = shootingSpeed;
     }
