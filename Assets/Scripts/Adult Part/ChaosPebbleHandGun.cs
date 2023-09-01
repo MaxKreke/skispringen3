@@ -9,7 +9,7 @@ public class ChaosPebbleHandGun : MonoBehaviour
     public GameObject shot;
     public GameObject blast;
     public Transform container;
-    public float projectileSpeed = .2f;
+    public float projectileSpeed = .3f;
 
     public LayerMask boxLayers;
     public Weaponswitch ws;

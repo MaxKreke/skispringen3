@@ -12,6 +12,7 @@ public class Grapplendix : MonoBehaviour
     public GameObject parentAdult;
     public Camera ownCamera;
     public LayerMask boxLayers;
+    public Material darmaterial;
     private float maximalDistanz = 100f;
 
     void Start()
@@ -52,6 +53,10 @@ public class Grapplendix : MonoBehaviour
         {
             CutLine();
         }
+        if((Input.GetKey("i") || Input.GetKey("e"))&& joint.maxDistance > joint.minDistance)
+        {
+            joint.maxDistance -= .05f;
+        }
     }
 
     public void CutLine()
@@ -70,6 +75,7 @@ public class Grapplendix : MonoBehaviour
     private void drawRope()
     {
         if (!joint) return;
+        darmaterial.mainTextureScale = new Vector2(joint.maxDistance*2, 1);
         lr.SetPosition(0, transform.position);
         lr.SetPosition(1, target);
     }
