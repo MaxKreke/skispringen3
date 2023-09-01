@@ -5,13 +5,11 @@ using UnityEngine;
 public class Gesundheitsanzeige : MonoBehaviour
 {
     public Movement HP;
-    private
-
-
+    
     void Update()
     {
 
         GetComponent<RectTransform>().anchoredPosition = new Vector2(HP.HP, GetComponent<RectTransform>().anchoredPosition.y);
-        GetComponent<RectTransform>().sizeDelta = new Vector2(HP.HP * 2, 66);
+        GetComponent<RectTransform>().sizeDelta = new Vector2(HP.HP * 2, 40);
     }
 }

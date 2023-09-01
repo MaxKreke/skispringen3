@@ -12,7 +12,7 @@ public class Playerhurtbox : MonoBehaviour
         {
             if (player != null)
             {
-                player.HP -= 10;
+                player.HP -= 6;
                 Knockback(other.gameObject.transform.position);
             }
 

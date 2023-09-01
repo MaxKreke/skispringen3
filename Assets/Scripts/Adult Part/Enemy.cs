@@ -55,6 +55,8 @@ public class Enemy : MonoBehaviour
             }
             else shootCooldown--;
         }
+        DeathCheck();
+
     }
 
 
@@ -103,5 +105,14 @@ public class Enemy : MonoBehaviour
             pInstance.direction = ((target.transform.position + Vector3.up*.3f)- shotPosition).normalized / 10;
         }
         shootCooldown = shootingSpeed;
+    }
+
+    private void DeathCheck()
+    {
+        if (transform.position.y < -100)
+        {
+            Debug.Log("aa i am ded");
+            this.gameObject.SetActive(false);
+        }
     }
 }

@@ -9,7 +9,7 @@ public class ChaosPebbleHandGun : MonoBehaviour
     public GameObject shot;
     public GameObject blast;
     public Transform container;
-    public float projectileSpeed = .3f;
+    public float projectileSpeed = .1f;
 
     public LayerMask boxLayers;
     public Weaponswitch ws;
@@ -53,7 +53,11 @@ public class ChaosPebbleHandGun : MonoBehaviour
             }
             pInstance.transform.SetParent(container);
         }
-        if (isBlasting) ws.Switch(-1f);
+        if (isBlasting)
+        {
+            ws.Switch(-1f);
+            ws.EmptyMana();
+        }
     }
 
     public void Blastin(bool start)

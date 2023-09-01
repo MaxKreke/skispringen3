@@ -11,6 +11,15 @@ public class Projectile : MonoBehaviour
     private float maximalDistanz = 60;
     private int destroyed = -1;
 
+    public Movement player;
+    public Manaanzeige mana;
+
+    private void Start()
+    {
+        mana = GameObject.Find("MANA").GetComponent<Manaanzeige>();
+        player = GameObject.Find("Adult").GetComponent<Movement>();
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Enemy")
@@ -19,7 +28,9 @@ public class Projectile : MonoBehaviour
             if (enemy && isFriendly)
             {
                 enemy.Bleed(ChaosPower);
+                if (!blast && !mana.full()) mana.Mana += ChaosPower;
             }
+            if (blast) player.HP += 10;
             Splash();
         }
         else if (other.gameObject.tag == "Untagged")
@@ -32,7 +43,6 @@ public class Projectile : MonoBehaviour
             if(player && !isFriendly)
             {
                 player.HP -= ChaosPower;
-                Debug.Log(player.HP);
             }
             Splash();
         }

@@ -10,6 +10,7 @@ public class Weaponswitch : MonoBehaviour
     public GameObject[] Sword;
     public bool handUnlocked;
     public bool blastUnlocked;
+    public Manaanzeige mana;
 
     private void Update()
     {
@@ -18,6 +19,10 @@ public class Weaponswitch : MonoBehaviour
             if (!handUnlocked) return;
             Switch(Input.mouseScrollDelta.y);
         }
+        if(mana != null)
+        {
+            mana.gameObject.SetActive(blastUnlocked);
+        }
 
     }
 
@@ -25,7 +30,7 @@ public class Weaponswitch : MonoBehaviour
     {
         SetWeaponActive(false);
         int weaponCount = 2;
-        if (blastUnlocked )weaponCount = 3;
+        if (blastUnlocked && mana.full())weaponCount = 3;
         int roundedDelta = Mathf.RoundToInt(delta);
         defaultWeapon += roundedDelta;
         if (defaultWeapon >= weaponCount)
@@ -63,8 +68,12 @@ public class Weaponswitch : MonoBehaviour
             if (!gun) return;
             gun.Blastin(true);
         }
+ 
+    }
 
-            
+    public void EmptyMana()
+    {
+        mana.Mana = 0;
     }
 
 }
