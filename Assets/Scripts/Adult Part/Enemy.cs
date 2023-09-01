@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public int HP = 300;
     public Material defaultMaterial;
     public Material damageMaterial;
+    public Material policeAnimationMaterial;
     public GameObject target;
     private int damageDuration = 15;
     private int leftoverDuration;
@@ -18,7 +19,6 @@ public class Enemy : MonoBehaviour
     public GameObject projectile;
     public float shootingSpeed;
     private float shootCooldown;
-
 
     private void Start()
     {
@@ -79,7 +79,14 @@ public class Enemy : MonoBehaviour
         if (mat == null) return;
         MeshRenderer renderer = GetComponent<MeshRenderer>();
         if (renderer == null) return;
-        renderer.material = mat;
+        if ((policeAnimationMaterial != null) && (renderer.material.mainTexture == defaultMaterial.mainTexture))
+        {
+            renderer.material = policeAnimationMaterial;
+        }
+        else
+        {
+            renderer.material = mat;
+        }
         leftoverDuration = damageDuration;
     }
 

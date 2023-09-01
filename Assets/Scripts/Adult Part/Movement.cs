@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
     public LayerMask GroundLayers;
     public Camera ownCamera;
     public Vector3 respawn;
+    public float HP = 150;
 
     void Start()
     {

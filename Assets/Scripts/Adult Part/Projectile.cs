@@ -7,6 +7,7 @@ public class Projectile : MonoBehaviour
     public Vector3 direction;
     public float ChaosPower = 1f;
     public bool blast = false;
+    public bool isFriendly;
     private float maximalDistanz = 60;
     private int destroyed = -1;
 
@@ -15,8 +16,9 @@ public class Projectile : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             Enemy enemy = other.gameObject.GetComponent<Enemy>();
-            if (enemy)
+            if (enemy && isFriendly)
             {
+                Debug.Log(isFriendly);
                 enemy.Bleed(ChaosPower);
             }
             Splash();
@@ -33,7 +35,7 @@ public class Projectile : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.gameObject.tag == "Enemy" && isFriendly)
         {
             Enemy enemy = other.gameObject.GetComponent<Enemy>();
             if (enemy)
