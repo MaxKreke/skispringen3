@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3037371058579538407}
   - component: {fileID: -372316837713429206}
   m_Layer: 6
-  m_Name: Aerial
+  m_Name: AerialCommando
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

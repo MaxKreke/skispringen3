@@ -106,7 +106,7 @@ MonoBehaviour:
   isAgressive: 1
   isFlying: 0
   isShooting: 1
-  projectile: {fileID: 2056563815088195960, guid: 0a95ba80fbfd67146881266f61d476e6, type: 3}
+  projectile: {fileID: 2056563815088195960, guid: 48b0c2c08b2778c4083980dc1c9e6178, type: 3}
   shootingSpeed: 100
 --- !u!114 &6177980573843148120
 MonoBehaviour:

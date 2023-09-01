@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3037371058579538407}
   - component: {fileID: -372316837713429206}
   m_Layer: 6
-  m_Name: Aerial
+  m_Name: AerialClown
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a93580942db24d14b9b9f465321a7b98, type: 2}
+  - {fileID: 2100000, guid: e8041c74eaf12ba4787dc2e31e1b798b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -99,14 +99,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 200
-  defaultMaterial: {fileID: 2100000, guid: a93580942db24d14b9b9f465321a7b98, type: 2}
-  damageMaterial: {fileID: 2100000, guid: 42fd5bf589b2a5c4899c04576d2d2d40, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: e8041c74eaf12ba4787dc2e31e1b798b, type: 2}
+  damageMaterial: {fileID: 2100000, guid: b3505e006b9b23244876ea5417ddd900, type: 2}
   target: {fileID: 0}
   movementSpeed: 0.02
   isAgressive: 1
   isFlying: 1
   isShooting: 1
-  projectile: {fileID: 2056563815088195960, guid: 14dc46788e2efd2478b7f3c127f845b8, type: 3}
+  projectile: {fileID: 2056563815088195960, guid: 519c89815c1157b43ae3ed5947409afc, type: 3}
   shootingSpeed: 200
 --- !u!114 &3037371058579538407
 MonoBehaviour:
