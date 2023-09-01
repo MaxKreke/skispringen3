@@ -46,7 +46,6 @@ public class Enemy : MonoBehaviour
             {
                 dif = target.transform.position+Vector3.up*4 - transform.position;
             }
-            Debug.Log(dif);
             dif.Normalize();
             transform.position += dif * movementSpeed;
             if (!isShooting) return;
@@ -104,10 +103,5 @@ public class Enemy : MonoBehaviour
             pInstance.direction = ((target.transform.position + Vector3.up*.3f)- shotPosition).normalized / 10;
         }
         shootCooldown = shootingSpeed;
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        Debug.LogError(other);
     }
 }

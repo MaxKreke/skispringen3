@@ -88,8 +88,8 @@ public class Movement : MonoBehaviour
         if (force != Vector3.zero)
         {
             body.velocity = Vector3.ClampMagnitude(rotatedForce.normalized * (currentSpeed + relativeSpeed) / 2, 150) + body.velocity.y * Vector3.up;
-            if(!air)body.AddForce(rotatedForce * 8);
-            else body.AddForce(rotatedForce * .5f);
+            if(!air) ApplyForce(rotatedForce * 8);
+            else ApplyForce(rotatedForce * .5f);
 
         }
     }
@@ -152,7 +152,13 @@ public class Movement : MonoBehaviour
 
     private void Death()
     {
+        Debug.LogError("DEATH");
         Application.Quit();
+    }
+
+    public void ApplyForce(Vector3 force)
+    {
+        body.AddForce(force);
     }
 
 }

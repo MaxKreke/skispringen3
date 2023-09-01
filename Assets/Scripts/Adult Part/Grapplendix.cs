@@ -55,9 +55,9 @@ public class Grapplendix : MonoBehaviour
             CutLine();
         }
         if (!joint) return;
-        if((Input.GetKey("i") || Input.GetKey("e"))&& joint.maxDistance > joint.minDistance)
+        if(joint.maxDistance > joint.minDistance)
         {
-            joint.maxDistance -= .05f;
+            joint.maxDistance -= .03f;
         }
     }
 
