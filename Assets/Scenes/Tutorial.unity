@@ -248,7 +248,7 @@ MonoBehaviour:
   boxLayers:
     serializedVersion: 2
     m_Bits: 1
-  darmaterial: {fileID: 0}
+  darmaterial: {fileID: 2100000, guid: d0e03c33aacef694cafc6499cfc371cf, type: 2}
 --- !u!120 &153039575
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -1796,6 +1796,7 @@ MonoBehaviour:
     m_Bits: 1
   ownCamera: {fileID: 963194227}
   respawn: {x: 0, y: 0, z: 0}
+  HP: 100
 --- !u!1 &2069559166
 GameObject:
   m_ObjectHideFlags: 0

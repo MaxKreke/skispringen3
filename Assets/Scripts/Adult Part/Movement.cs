@@ -12,7 +12,7 @@ public class Movement : MonoBehaviour
     public LayerMask GroundLayers;
     public Camera ownCamera;
     public Vector3 respawn;
-    public float HP = 150;
+    public float HP = 100;
 
     void Start()
     {
@@ -141,7 +141,18 @@ public class Movement : MonoBehaviour
 
     private void DeathCheck()
     {
-        if (transform.position.y < -100) transform.position = respawn;
+        if (transform.position.y < -100)
+        {
+            HP -= 10;
+            transform.position = respawn;
+            Debug.Log(HP);
+        }
+        if (HP <= 0) Death();
+    }
+
+    private void Death()
+    {
+        Application.Quit();
     }
 
 }

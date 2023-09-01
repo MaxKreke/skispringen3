@@ -18,7 +18,6 @@ public class Projectile : MonoBehaviour
             Enemy enemy = other.gameObject.GetComponent<Enemy>();
             if (enemy && isFriendly)
             {
-                Debug.Log(isFriendly);
                 enemy.Bleed(ChaosPower);
             }
             Splash();
@@ -29,6 +28,12 @@ public class Projectile : MonoBehaviour
         }
         else if (other.gameObject.tag == "Character")
         {
+            Movement player = other.gameObject.GetComponent<Movement>();
+            if(player && !isFriendly)
+            {
+                player.HP -= ChaosPower;
+                Debug.Log(player.HP);
+            }
             Splash();
         }
     }

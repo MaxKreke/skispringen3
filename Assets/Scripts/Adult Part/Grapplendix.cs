@@ -48,11 +48,13 @@ public class Grapplendix : MonoBehaviour
                 joint.massScale = 4.5f;
                 lr.positionCount = 2;
             }
+
         }
         if (Input.GetMouseButtonUp(1))
         {
             CutLine();
         }
+        if (!joint) return;
         if((Input.GetKey("i") || Input.GetKey("e"))&& joint.maxDistance > joint.minDistance)
         {
             joint.maxDistance -= .05f;
