@@ -29,6 +29,16 @@ public class Inventory : MonoBehaviour
             Money += item.MoneyValue;
             return;
         }
+        if (item.Pee)
+        {
+            ws.ActivateHand();
+            return;
+        }
+        if (item.CriminalEnergy)
+        {
+            ws.ActivateBlast();
+            return;
+        }
         inventory.Add(item);
 
     }

@@ -16,7 +16,8 @@ public class Projectile : MonoBehaviour
 
     private void Start()
     {
-        mana = GameObject.Find("MANA").GetComponent<Manaanzeige>();
+        GameObject ui = GameObject.Find("MANA");
+        if(ui!=null)mana = ui.GetComponent<Manaanzeige>();
         player = GameObject.Find("Adult").GetComponent<Movement>();
     }
 
@@ -28,7 +29,11 @@ public class Projectile : MonoBehaviour
             if (enemy && isFriendly)
             {
                 enemy.Bleed(ChaosPower);
-                if (!blast && !mana.full()) mana.Mana += ChaosPower;
+                if (!blast && mana!=null)
+                {
+                    if(!mana.full())
+                    mana.Mana += ChaosPower;
+                }
             }
             if (blast) player.HP += 10;
             Splash();

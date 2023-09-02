@@ -76,4 +76,17 @@ public class Weaponswitch : MonoBehaviour
         mana.Mana = 0;
     }
 
+    public void ActivateHand()
+    {
+        handUnlocked = true;
+        Switch(1);
+    }
+
+    public void ActivateBlast()
+    {
+        blastUnlocked = true;
+        if (defaultWeapon == 0)Switch(-1);
+        else Switch(1);
+    }
+
 }
