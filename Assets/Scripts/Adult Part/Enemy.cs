@@ -17,8 +17,10 @@ public class Enemy : MonoBehaviour
     public bool isFlying = false;
     public bool isShooting = false;
     public GameObject projectile;
+    public GameObject item;
     public float shootingSpeed;
     private float shootCooldown;
+    private bool dead = false;
 
     private void Start()
     {
@@ -55,7 +57,6 @@ public class Enemy : MonoBehaviour
             }
             else shootCooldown--;
         }
-        DeathCheck();
 
     }
 
@@ -71,8 +72,7 @@ public class Enemy : MonoBehaviour
         }
         if (HP <= 0)
         {
-            Debug.Log("aa i am ded");
-            Destroy(gameObject);
+            dead = true;
         }
     }
 
@@ -111,8 +111,16 @@ public class Enemy : MonoBehaviour
     {
         if (transform.position.y < -100)
         {
-            Debug.Log("aa i am ded");
-            Destroy(gameObject);
+            dead = true;
         }
+    }
+
+    private void LateUpdate()
+    {
+        DeathCheck();
+        if (!dead) return;
+        Debug.Log("aa i am ded");
+        GameObject instance = Instantiate(item, transform.position, transform.rotation);
+        Destroy(gameObject);
     }
 }
