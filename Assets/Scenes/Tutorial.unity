@@ -997,7 +997,6 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
-  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Adultcamera
   m_TagString: MainCamera
@@ -1092,29 +1091,6 @@ MonoBehaviour:
   verticalRotation: 0
   horizontalRotation: 0
   parentAdult: {fileID: 2019640239}
---- !u!114 &963194230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 561f8e4b6f3ed534dbcc4329b6df9999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  defaultWeapon: 0
-  hand:
-  - {fileID: 1541705385}
-  - {fileID: 504845953}
-  - {fileID: 585537415}
-  Sword:
-  - {fileID: 1496046754}
-  - {fileID: 2069559166}
-  handUnlocked: 1
-  blastUnlocked: 1
-  mana: {fileID: 1268443051}
 --- !u!1 &1133257230
 GameObject:
   m_ObjectHideFlags: 0
@@ -1704,7 +1680,7 @@ MonoBehaviour:
   boxLayers:
     serializedVersion: 2
     m_Bits: 65
-  ws: {fileID: 963194230}
+  ws: {fileID: 2019640246}
 --- !u!1 &1631731715
 GameObject:
   m_ObjectHideFlags: 0
@@ -1912,6 +1888,8 @@ GameObject:
   - component: {fileID: 2019640240}
   - component: {fileID: 2019640244}
   - component: {fileID: 2019640245}
+  - component: {fileID: 2019640246}
+  - component: {fileID: 2019640247}
   m_Layer: 7
   m_Name: Adult
   m_TagString: Character
@@ -2036,6 +2014,44 @@ MonoBehaviour:
   ownCamera: {fileID: 963194227}
   respawn: {x: 0, y: 0, z: 0}
   HP: 150
+--- !u!114 &2019640246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019640239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 561f8e4b6f3ed534dbcc4329b6df9999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultWeapon: 0
+  hand:
+  - {fileID: 1541705385}
+  - {fileID: 504845953}
+  - {fileID: 585537415}
+  Sword:
+  - {fileID: 1496046754}
+  - {fileID: 2069559166}
+  handUnlocked: 1
+  blastUnlocked: 1
+  mana: {fileID: 1268443051}
+--- !u!114 &2019640247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2019640239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf1846a7c8770f84aae0eb5b33816f21, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Money: 0
+  inventory: []
+  ws: {fileID: 0}
 --- !u!1 &2069559166
 GameObject:
   m_ObjectHideFlags: 0

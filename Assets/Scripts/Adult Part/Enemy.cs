@@ -72,7 +72,7 @@ public class Enemy : MonoBehaviour
         if (HP <= 0)
         {
             Debug.Log("aa i am ded");
-            this.gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 
@@ -112,7 +112,7 @@ public class Enemy : MonoBehaviour
         if (transform.position.y < -100)
         {
             Debug.Log("aa i am ded");
-            this.gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }

@@ -12,6 +12,7 @@ TagManager:
   - ChaosSphincter
   - Sword
   - Nothing
+  - Item
   layers:
   - Default
   - TransparentFX

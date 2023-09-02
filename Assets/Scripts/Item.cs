@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
-    public int Moneyvalue;
+    public int MoneyValue;
     public int Hygiene;
     public int Joy;
     public int Charisma;
@@ -15,4 +15,6 @@ public class Item : MonoBehaviour
     public int Empathy;
 
     public Texture img;
+    public bool Pee;
+    public bool CriminalEnergy;
 }

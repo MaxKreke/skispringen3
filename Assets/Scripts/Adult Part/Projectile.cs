@@ -44,7 +44,7 @@ public class Projectile : MonoBehaviour
             {
                 player.HP -= ChaosPower;
             }
-            Splash();
+            if (!isFriendly)Splash();
         }
     }
 
