@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour
 {
+    public int Kaufpreis;
     public int MoneyValue;
     public int Hygiene;
     public int Joy;
