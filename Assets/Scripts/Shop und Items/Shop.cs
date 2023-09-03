@@ -25,15 +25,10 @@ public class Shop : MonoBehaviour
         {
             GameObject.Find("Terminal").GetComponent<Terminal>().ToggleCursor(false);
             Camera.main.gameObject.GetComponent<CameraRotation>().captureMouse = true;
+            shop.GetComponent<ShopDisplay>().Klauen();
             shop.SetActive(false);
             canvas.SetActive(true);
         }
     }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

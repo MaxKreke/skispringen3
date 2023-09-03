@@ -100,4 +100,18 @@ public class ShopDisplay : MonoBehaviour
         }
     }
 
+    public void Klauen()
+    {
+        if(own.inventory.Count > 0)
+        {
+            foreach (Item item in own.inventory)
+            {
+                player.AddItem(item);
+            }
+            own.inventory.Clear();
+            LoadInventory();
+            Debug.LogError("KLAUEN");
+        }
+    }
+
 }
