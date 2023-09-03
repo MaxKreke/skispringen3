@@ -22,7 +22,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    private void AddItem(Item item)
+    public void AddItem(Item item)
     {
         if (item.MoneyValue > 0)
         {
