@@ -67,6 +67,7 @@ public class Weaponswitch : MonoBehaviour
             ChaosPebbleHandGun gun = hand[0].GetComponent<ChaosPebbleHandGun>();
             if (!gun) return;
             gun.Blastin(true);
+            Debug.Log("true");
         }
  
     }

@@ -17,10 +17,11 @@ public class ChaosPebbleHandGun : MonoBehaviour
     private bool isBlasting;
     private GameObject projectile;
 
-    private void Start()
+    private void Awake()
     {
         isBlasting = false;
         projectile = shot;
+        Debug.Log("false");
     }
 
     private void Update()
