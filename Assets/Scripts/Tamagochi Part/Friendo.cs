@@ -15,6 +15,7 @@ public class Friendo : MonoBehaviour
     public string attack;
 
     public float[] modifiers;
+    public int difficulty;
 
 
 

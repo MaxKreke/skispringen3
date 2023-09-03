@@ -137,6 +137,7 @@ MonoBehaviour:
   reduceStat: joy
   attack: makes you sad
   modifiers:
-  - -1
+  - 2
   - 2
   - 0
+  difficulty: 1

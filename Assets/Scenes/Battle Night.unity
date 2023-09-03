@@ -1693,7 +1693,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 5736208443729405074, guid: 6cd11d2136119ed43835280311937e79, type: 3}
-  friendPrefab: {fileID: 4765367362315688525, guid: c39c52aede5cf9f438c963142088b513, type: 3}
+  friendPrefab: {fileID: 2832903811831305215, guid: ffbdac973aeeabb48812c2b792dcf24c, type: 3}
+  friends:
+  - {fileID: 5983501076531247184, guid: 78432811743fa6e44bbc4ccf44c7000d, type: 3}
+  - {fileID: 4249705201242024376, guid: 0cce156a44d1e5a429eec0bfd46b89cc, type: 3}
+  - {fileID: 365851962148569700, guid: 9804acfbd0934ad4e810a675512fb443, type: 3}
+  - {fileID: 1813328002716089859, guid: fd0274451369e3f4ab6acd58da3f69f6, type: 3}
+  - {fileID: 4765367362315688525, guid: c39c52aede5cf9f438c963142088b513, type: 3}
+  - {fileID: 2832903811831305215, guid: ffbdac973aeeabb48812c2b792dcf24c, type: 3}
   state: 0
   dialogueText: {fileID: 1605017345}
   friendHUD: {fileID: 1487840616}
@@ -2070,75 +2077,6 @@ MonoBehaviour:
   patSlider: {fileID: 693457468}
   friendText: {fileID: 270523562}
   patText: {fileID: 642184757}
---- !u!1001 &1547937177
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6209291316087957789, guid: 8585298fb4133264d9a2319d059575e6, type: 3}
-      propertyPath: m_Name
-      value: Hat without Bird
-      objectReference: {fileID: 0}
-    - target: {fileID: 6209291316087957790, guid: 8585298fb4133264d9a2319d059575e6, type: 3}
-      propertyPath: friendoName
-      value: Hat without Bird
-      objectReference: {fileID: 0}
-    - target: {fileID: 6209291316087957791, guid: 8585298fb4133264d9a2319d059575e6, type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6209291316087957791, guid: 8585298fb4133264d9a2319d059575e6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6209291316087957791, guid: 8585298fb4133264d9a2319d059575e6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6209291316087957791, guid: 8585298fb4133264d9a2319d059575e6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6209291316087957791, guid: 8585298fb4133264d9a2319d059575e6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6209291316087957791, guid: 8585298fb4133264d9a2319d059575e6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6209291316087957791, guid: 8585298fb4133264d9a2319d059575e6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6209291316087957791, guid: 8585298fb4133264d9a2319d059575e6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6209291316087957791, guid: 8585298fb4133264d9a2319d059575e6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6209291316087957791, guid: 8585298fb4133264d9a2319d059575e6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6209291316087957791, guid: 8585298fb4133264d9a2319d059575e6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6209291316885636129, guid: 8585298fb4133264d9a2319d059575e6, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 690b93f107bf6e141a44c1f2e5f28fce, type: 3}
-    - target: {fileID: 6209291316885636135, guid: 8585298fb4133264d9a2319d059575e6, type: 3}
-      propertyPath: m_Name
-      value: Hat without Bird
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 8585298fb4133264d9a2319d059575e6, type: 3}
 --- !u!1 &1558301678
 GameObject:
   m_ObjectHideFlags: 0

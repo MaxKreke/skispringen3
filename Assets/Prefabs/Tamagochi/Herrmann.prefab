@@ -137,6 +137,7 @@ MonoBehaviour:
   reduceStat: will
   attack: flashes his knife
   modifiers:
-  - -1
-  - 2
   - 0
+  - 0
+  - 2
+  difficulty: 3
