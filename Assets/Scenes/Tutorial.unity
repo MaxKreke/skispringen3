@@ -1250,6 +1250,7 @@ MonoBehaviour:
   verticalRotation: 0
   horizontalRotation: 0
   parentAdult: {fileID: 2019640239}
+  captureMouse: 1
 --- !u!1 &1133257230
 GameObject:
   m_ObjectHideFlags: 0
@@ -2214,6 +2215,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  Day: 1
 --- !u!4 &1826704111
 Transform:
   m_ObjectHideFlags: 0
@@ -2433,7 +2435,7 @@ MonoBehaviour:
   speed: 1
   GroundLayers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 4161
   ownCamera: {fileID: 963194227}
   respawn: {x: 0, y: 0, z: 0}
   HP: 150

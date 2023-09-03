@@ -1528,7 +1528,7 @@ MonoBehaviour:
   - {fileID: 2800000, guid: 3aee96f100686564e86b5accc061b321, type: 3}
   - {fileID: 2800000, guid: e3b7832881ee50c42b68d1294d93a0a5, type: 3}
   - {fileID: 2800000, guid: fbc165c238d93ce478dc70457f29e15e, type: 3}
-  AnimationSpeed: 20
+  AnimationSpeed: 40
 --- !u!1 &1205994002
 GameObject:
   m_ObjectHideFlags: 0

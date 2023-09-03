@@ -6,6 +6,7 @@ public class Terminal : MonoBehaviour
 {
     public GameObject activeLevel;
     public GameObject [] Levels;
+    public int Day = 1;
 
     void Start()
     {
