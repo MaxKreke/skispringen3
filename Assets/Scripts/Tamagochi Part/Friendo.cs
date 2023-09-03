@@ -17,10 +17,11 @@ public class Friendo : MonoBehaviour
     public float[] modifiers;
 
 
+
     public bool TakeDamage(float dmg, int type)
     {
         float modifier = 1;
-        if (type <=0)
+        if (type <0)
         {
             modifier = 1;
         }
@@ -28,7 +29,7 @@ public class Friendo : MonoBehaviour
         {
             modifier = modifiers[type];
         }
-
+        Debug.Log(modifier);
         currentFriendship = (int) Mathf.Clamp(Mathf.Round(currentFriendship)+ modifier * dmg, 0.0f, maxFriendship);
 
         if (currentFriendship >= maxFriendship)

@@ -45,11 +45,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tamaName: Tamagochi
-  hygiene: 15
-  charisma: 15
-  joy: 15
+  hygiene: 0
+  charisma: 0
+  joy: 0
   tomfoolery: 0
-  fashion: 15
-  empathy: 0
-  will: 1
+  fashion: 0
+  empathy: 6
+  will: 0
   anger: 0

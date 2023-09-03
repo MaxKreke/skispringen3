@@ -12,18 +12,18 @@ public class Shop : MonoBehaviour
         if (other.gameObject.tag == "Character")
         {
             Debug.Log("shop");
-            //shop.SetActive(true);
-            //canvas.SetActive(false);
+            shop.SetActive(true);
+            canvas.SetActive(false);
         }
     }
 
-    private void OnTriggerLeave(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Character")
         {
             Debug.Log("GoodBye");
-            //shop.SetActive(false);
-            //canvas.SetActive(true);
+            shop.SetActive(false);
+            canvas.SetActive(true);
         }
     }
 
