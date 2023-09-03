@@ -21,7 +21,6 @@ public class ChaosPebbleHandGun : MonoBehaviour
     {
         isBlasting = false;
         projectile = shot;
-        Debug.Log("false");
     }
 
     private void Update()
