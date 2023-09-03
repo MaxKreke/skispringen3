@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static Terminal;
 
 public class Movement : MonoBehaviour
 {
@@ -13,10 +14,12 @@ public class Movement : MonoBehaviour
     public Camera ownCamera;
     public Vector3 respawn;
     public float HP = 150;
+    private Terminal terminal;
 
     void Start()
     {
         body = GetComponent<Rigidbody>();
+        terminal = GameObject.Find("Terminal").GetComponent<Terminal>();
     }
 
     void Update()
@@ -152,8 +155,7 @@ public class Movement : MonoBehaviour
 
     private void Death()
     {
-        Debug.LogError("DEATH");
-        Application.Quit();
+        terminal.EndDay();
     }
 
     public void ApplyForce(Vector3 force)
