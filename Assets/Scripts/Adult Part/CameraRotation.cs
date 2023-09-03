@@ -8,6 +8,7 @@ public class CameraRotation : MonoBehaviour
     public float verticalRotation = 0;
     public float horizontalRotation = 0;
     public GameObject parentAdult;
+    public bool captureMouse = true;
 
     private void Update()
     {
@@ -17,8 +18,13 @@ public class CameraRotation : MonoBehaviour
 
     public void RotateCamera()
     {
-        float inputX = Input.GetAxis("Mouse X") * mouseSensitivity;
-        float inputY = Input.GetAxis("Mouse Y") * mouseSensitivity;
+        float inputX = 0;
+        float inputY = 0;
+        if (captureMouse)
+        {
+            inputX = Input.GetAxis("Mouse X") * mouseSensitivity;
+            inputY = Input.GetAxis("Mouse Y") * mouseSensitivity;
+        }
         verticalRotation -= inputY;
         horizontalRotation += inputX;
         verticalRotation = Mathf.Clamp(verticalRotation, -90f, 90f);

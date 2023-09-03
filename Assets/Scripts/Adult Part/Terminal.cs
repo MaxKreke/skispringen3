@@ -9,9 +9,8 @@ public class Terminal : MonoBehaviour
 
     void Start()
     {
-        
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+
+        ToggleCursor(false);
 
         Application.targetFrameRate = 120;
     }
@@ -35,6 +34,14 @@ public class Terminal : MonoBehaviour
                 levelNumber.GetComponent<Level>().Woosh();
             }
         }
+    }
+
+    public void ToggleCursor(bool cursor)
+    {
+        Cursor.visible = cursor;
+        if(cursor) Cursor.lockState = CursorLockMode.None;
+        else Cursor.lockState = CursorLockMode.Locked;
+
     }
 
     //Display Framerate
