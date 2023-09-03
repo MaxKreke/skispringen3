@@ -120,7 +120,8 @@ public class Enemy : MonoBehaviour
         DeathCheck();
         if (!dead) return;
         Debug.Log("aa i am ded");
-        GameObject instance = Instantiate(item, transform.position, transform.rotation);
+        GameObject instance;
+        if(item != null)instance = Instantiate(item, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 }
