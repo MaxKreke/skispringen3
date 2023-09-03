@@ -6,13 +6,11 @@ public class Terminal : MonoBehaviour
 {
     public GameObject activeLevel;
     public GameObject [] Levels;
-    public int Day = 1;
+    public static int Day = 1;
 
     void Start()
     {
-
         ToggleCursor(false);
-
         Application.targetFrameRate = 120;
     }
 
@@ -55,4 +53,5 @@ public class Terminal : MonoBehaviour
     {
         Debug.LogError("Day is End");
     }
+
 }

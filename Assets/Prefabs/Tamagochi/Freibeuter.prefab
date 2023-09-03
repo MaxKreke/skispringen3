@@ -53,9 +53,10 @@ MonoBehaviour:
   reduceStat: charisma
   attack: tears your clothes to tatters
   modifiers:
-  - -1
-  - 2
   - 0
+  - 1
+  - 2
+  difficulty: 2
 --- !u!1 &1813328003478639417
 GameObject:
   m_ObjectHideFlags: 0

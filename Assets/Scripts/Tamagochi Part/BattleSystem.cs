@@ -15,6 +15,8 @@ public class BattleSystem : MonoBehaviour
     /// Hier sind die friend Prefabs
     /// </summary>
     public GameObject friendPrefab;
+    public GameObject[] friends;
+
 
     public BattleState state;
 
@@ -30,9 +32,18 @@ public class BattleSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        ChooseRandomOpponent();
         state = BattleState.START;
         StartCoroutine(SetupBattle());
 
+    }
+
+    void ChooseRandomOpponent()
+    {
+
+        int index = Mathf.RoundToInt(Random.Range(0, 1))+2*(Terminal.Day-1);
+        Debug.Log("index");
+        friendPrefab = friends[index];
     }
 
     IEnumerator SetupBattle()

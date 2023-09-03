@@ -53,9 +53,10 @@ MonoBehaviour:
   reduceStat: hygiene
   attack: blows cigarette smoke on you
   modifiers:
-  - -1
   - 2
-  - 0
+  - 2
+  - -1
+  difficulty: 2
 --- !u!1 &365851962472345438
 GameObject:
   m_ObjectHideFlags: 0

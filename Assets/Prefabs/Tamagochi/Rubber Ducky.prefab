@@ -53,9 +53,10 @@ MonoBehaviour:
   reduceStat: anger
   attack: makes squeaky sounds
   modifiers:
-  - -1
+  - 1
   - 2
-  - 0
+  - 1
+  difficulty: 1
 --- !u!1 &4249705201568367746
 GameObject:
   m_ObjectHideFlags: 0
