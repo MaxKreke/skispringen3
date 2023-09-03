@@ -1896,7 +1896,7 @@ MonoBehaviour:
   ownCamera: {fileID: 963194227}
   boxLayers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 4096
   darmaterial: {fileID: 2100000, guid: d0e03c33aacef694cafc6499cfc371cf, type: 2}
 --- !u!120 &153039575
 LineRenderer:
