@@ -36,10 +36,7 @@ public class Terminal : MonoBehaviour
 
         //Changing spawnpoint
         Level enteredLevel = level.GetComponent<Level>();
-        Movement playerMovement = player.GetComponent<Movement>();
-        if (playerMovement != null && enteredLevel != null) {
-            playerMovement.respawn = enteredLevel.spawnpoint;
-        }
+        if (enteredLevel != null) Terminal.SetRespawn(enteredLevel.spawnpoint, player);
 
         //Other levels go
         foreach(GameObject levelNumber in Levels)
@@ -57,6 +54,14 @@ public class Terminal : MonoBehaviour
         if(cursor) Cursor.lockState = CursorLockMode.None;
         else Cursor.lockState = CursorLockMode.Locked;
 
+    }
+
+    public static void SetRespawn(Vector3 respawn, GameObject player)
+    {
+        Movement playerMovement = player.GetComponent<Movement>();
+        if (playerMovement != null) {
+            playerMovement.respawn = respawn;
+        }
     }
 
     //Display Framerate

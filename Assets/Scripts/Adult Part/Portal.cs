@@ -12,6 +12,7 @@ public class Portal : MonoBehaviour
         {
             Terminal.levelCleared = true;
             other.gameObject.transform.position = targetPosition;
+            Terminal.SetRespawn(targetPosition, other.gameObject);
         }
     }
 }
