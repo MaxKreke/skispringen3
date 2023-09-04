@@ -43,7 +43,7 @@ public class Movement : MonoBehaviour
 
     private void GroundedCheck()
     {
-        grounded = Physics.CheckSphere(transform.position, .6f, GroundLayers);
+        grounded = Physics.CheckSphere(transform.position+Vector3.down*.2f, .4f, GroundLayers);
     }
 
     private void Move(bool air = false)
