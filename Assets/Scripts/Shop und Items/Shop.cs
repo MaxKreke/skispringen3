@@ -6,12 +6,25 @@ public class Shop : MonoBehaviour
 {
     public GameObject canvas;
     public GameObject shop;
+    public GameObject pee;
+    public GameObject criminalEnergy;
+
+    private void Start()
+    {
+        if (Terminal.blastUnlocked) return;
+        if (Terminal.handUnlocked)
+        {
+            GetComponent<Inventory>().inventory.Add(criminalEnergy.GetComponent<Item>());
+            return;
+        }
+        GetComponent<Inventory>().inventory.Add(pee.GetComponent<Item>());
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Character")
         {
-            GameObject.Find("Terminal").GetComponent<Terminal>().ToggleCursor(true);
+            Terminal.ToggleCursor(true);
             Camera.main.gameObject.GetComponent<CameraRotation>().captureMouse = false;
             shop.SetActive(true);
             shop.GetComponent<ShopDisplay>().shop = GetComponent<Inventory>();
@@ -23,7 +36,7 @@ public class Shop : MonoBehaviour
     {
         if (other.gameObject.tag == "Character")
         {
-            GameObject.Find("Terminal").GetComponent<Terminal>().ToggleCursor(false);
+            Terminal.ToggleCursor(false);
             Camera.main.gameObject.GetComponent<CameraRotation>().captureMouse = true;
             shop.GetComponent<ShopDisplay>().Klauen();
             shop.SetActive(false);

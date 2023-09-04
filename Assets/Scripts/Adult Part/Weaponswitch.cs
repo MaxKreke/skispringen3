@@ -12,6 +12,13 @@ public class Weaponswitch : MonoBehaviour
     public bool blastUnlocked;
     public Manaanzeige mana;
 
+    private void Start()
+    {
+        handUnlocked = Terminal.handUnlocked;
+        blastUnlocked = Terminal.blastUnlocked;
+    }
+
+
     private void Update()
     {
         if(Input.mouseScrollDelta.y != 0)

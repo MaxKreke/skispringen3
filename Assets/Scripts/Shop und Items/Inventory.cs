@@ -32,11 +32,13 @@ public class Inventory : MonoBehaviour
         if (item.Pee)
         {
             ws.ActivateHand();
+            Terminal.handUnlocked = true;
             return;
         }
         if (item.CriminalEnergy)
         {
             ws.ActivateBlast();
+            Terminal.blastUnlocked = true;
             return;
         }
         inventory.Add(item);

@@ -14,4 +14,16 @@ public class Tamagochi : MonoBehaviour
     public int empathy;
     public int will;
     public int anger;
+
+    private void Start()
+    {
+        hygiene = Terminal.hygiene;
+        charisma = Terminal.charisma;
+        joy = Terminal.joy;
+        tomfoolery = Terminal.tomfoolery;
+        fashion = Terminal.fashion;
+        empathy = Terminal.empathy;
+        will = Terminal.will;
+        anger = Terminal.anger;
+    }
 }

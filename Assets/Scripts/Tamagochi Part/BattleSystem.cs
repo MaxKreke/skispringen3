@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST}
 
@@ -32,6 +33,8 @@ public class BattleSystem : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Terminal.ToggleCursor(true);
+        Application.targetFrameRate = 120;
         ChooseRandomOpponent();
         state = BattleState.START;
         StartCoroutine(SetupBattle());
@@ -40,9 +43,8 @@ public class BattleSystem : MonoBehaviour
 
     void ChooseRandomOpponent()
     {
-
-        int index = Mathf.RoundToInt(Random.Range(0, 1))+2*(Terminal.Day-1);
-        Debug.Log("index");
+        int rnd = Random.Range(0, 2);
+        int index = rnd+2*(Terminal.Day-1);
         friendPrefab = friends[index];
     }
 
@@ -190,11 +192,15 @@ public class BattleSystem : MonoBehaviour
         if (state == BattleState.WON)
         {
             dialogueText.text = "You and " + friend.friendoName + " are now friends! :)";
+            Terminal.friends.Add(friendPrefab);
+
         }
         else if (state == BattleState.LOST)
         {
             dialogueText.text = friend.friendoName + " is fed up with you and goes home...  :()";
         }
+        Terminal.Day++;
+        SceneManager.LoadScene("Day");
     }
 
     IEnumerator EnemyTurn()

@@ -128,3 +128,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 0}
   shop: {fileID: 0}
+  pee: {fileID: 1816328609565145087, guid: f47d831b6c416054d80569945eda1712, type: 3}
+  criminalEnergy: {fileID: 5974271162143905409, guid: 320f5085adcc29546b445662d42b2dff, type: 3}

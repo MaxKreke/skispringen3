@@ -6,11 +6,25 @@ public class Terminal : MonoBehaviour
 {
     public GameObject activeLevel;
     public GameObject [] Levels;
+
     public static int Day = 1;
+    public static List<GameObject> friends = new List<GameObject>();
+    public static bool handUnlocked = false;
+    public static bool blastUnlocked = false;
+
+    public static int hygiene = 0;
+    public static int charisma = 0;
+    public static int joy = 0;
+    public static int tomfoolery = 0;
+    public static int fashion = 0;
+    public static int empathy = 0;
+    public static int will = 0;
+    public static int anger = 0;
+    public static bool levelCleared = true;
 
     void Start()
     {
-        ToggleCursor(false);
+        Terminal.ToggleCursor(false);
         Application.targetFrameRate = 120;
     }
 
@@ -35,7 +49,7 @@ public class Terminal : MonoBehaviour
         }
     }
 
-    public void ToggleCursor(bool cursor)
+    public static void ToggleCursor(bool cursor)
     {
         Cursor.visible = cursor;
         if(cursor) Cursor.lockState = CursorLockMode.None;
