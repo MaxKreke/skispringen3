@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Terminal : MonoBehaviour
 {
@@ -87,7 +88,7 @@ public class Terminal : MonoBehaviour
 
     public void EndDay()
     {
-        Debug.LogError("Day is End");
+        //SceneManager.LoadScene("Battle Night");
     }
 
 }
