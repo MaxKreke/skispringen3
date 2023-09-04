@@ -64,6 +64,14 @@ public class Terminal : MonoBehaviour
         }
     }
 
+    public int GetActiveLevel()
+    {
+        if (activeLevel == Levels[0]) return 1;
+        if (activeLevel == Levels[0]) return 0;
+        if (activeLevel == Levels[0]) return 0;
+        else return 0;
+    }
+
     public static void ToggleCursor(bool cursor)
     {
         Cursor.visible = cursor;
