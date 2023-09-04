@@ -12,8 +12,8 @@ public class Terminal : MonoBehaviour
     public static bool handUnlocked = false;
     public static bool blastUnlocked = false;
 
-    public static int hygiene = 0;
-    public static int charisma = 0;
+    public static int hygiene = 5;
+    public static int charisma = 5;
     public static int joy = 0;
     public static int tomfoolery = 0;
     public static int fashion = 0;

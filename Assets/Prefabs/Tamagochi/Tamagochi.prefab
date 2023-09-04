@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tamaName: Tamagochi
-  hygiene: 0
-  charisma: 0
+  hygiene: 5
+  charisma: 5
   joy: 0
   tomfoolery: 0
   fashion: 0
