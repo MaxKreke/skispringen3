@@ -32,7 +32,7 @@ public class Grapplendix : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, ownCamera.transform.TransformDirection(Vector3.forward), out hit, maximalDistanz, boxLayers))
+            if (Physics.Raycast(ownCamera.transform.position, ownCamera.transform.TransformDirection(Vector3.forward), out hit, maximalDistanz, boxLayers))
             {
                 target = hit.point;
                 joint = parentAdult.AddComponent<SpringJoint>();

@@ -5286,7 +5286,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 434439718495995763, guid: c0f1b1086e6391b479e4f5847d130df6, type: 3}
       propertyPath: inventory.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 434439718495995763, guid: c0f1b1086e6391b479e4f5847d130df6, type: 3}
       propertyPath: inventory.Array.data[0]
@@ -5307,7 +5307,11 @@ PrefabInstance:
     - target: {fileID: 434439718495995763, guid: c0f1b1086e6391b479e4f5847d130df6, type: 3}
       propertyPath: inventory.Array.data[4]
       value: 
-      objectReference: {fileID: 1816328609565145082, guid: 0960d5cfa9a24d4499a1ef75d4d242de, type: 3}
+      objectReference: {fileID: 1816328609565145082, guid: 7dc00b5ee8950a4458f41edc6d5435c7, type: 3}
+    - target: {fileID: 434439718495995763, guid: c0f1b1086e6391b479e4f5847d130df6, type: 3}
+      propertyPath: inventory.Array.data[5]
+      value: 
+      objectReference: {fileID: 1816328609565145082, guid: b9bbe05fdbe274c42908a9bdd993a38d, type: 3}
     - target: {fileID: 434439718495995769, guid: c0f1b1086e6391b479e4f5847d130df6, type: 3}
       propertyPath: m_Name
       value: Shop
@@ -7627,7 +7631,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 434439718495995763, guid: c0f1b1086e6391b479e4f5847d130df6, type: 3}
       propertyPath: inventory.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 434439718495995763, guid: c0f1b1086e6391b479e4f5847d130df6, type: 3}
       propertyPath: inventory.Array.data[0]
@@ -7648,7 +7652,11 @@ PrefabInstance:
     - target: {fileID: 434439718495995763, guid: c0f1b1086e6391b479e4f5847d130df6, type: 3}
       propertyPath: inventory.Array.data[4]
       value: 
-      objectReference: {fileID: 1816328609565145082, guid: f47d831b6c416054d80569945eda1712, type: 3}
+      objectReference: {fileID: 1816328609565145082, guid: 2970b36a24642404d98ce7037d16835d, type: 3}
+    - target: {fileID: 434439718495995763, guid: c0f1b1086e6391b479e4f5847d130df6, type: 3}
+      propertyPath: inventory.Array.data[5]
+      value: 
+      objectReference: {fileID: 1816328609565145082, guid: 01189b25d9223154c81b26cb671b507c, type: 3}
     - target: {fileID: 434439718495995769, guid: c0f1b1086e6391b479e4f5847d130df6, type: 3}
       propertyPath: m_Name
       value: Shop

@@ -14,10 +14,10 @@ public class Shop : MonoBehaviour
         if (Terminal.blastUnlocked) return;
         if (Terminal.handUnlocked)
         {
-            GetComponent<Inventory>().inventory.Add(criminalEnergy.GetComponent<Item>());
+            GetComponent<Inventory>().inventory.Insert(0,criminalEnergy.GetComponent<Item>());
             return;
         }
-        GetComponent<Inventory>().inventory.Add(pee.GetComponent<Item>());
+        GetComponent<Inventory>().inventory.Insert(0,pee.GetComponent<Item>());
     }
 
     private void OnTriggerEnter(Collider other)
