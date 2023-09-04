@@ -43,7 +43,7 @@ public class Shop : MonoBehaviour
             Camera.main.gameObject.GetComponent<CameraRotation>().captureMouse = true;
             if (shop.GetComponent<ShopDisplay>().Klauen())
             {
-                Debug.LogError("Klauen");
+                Destroy(GetComponent<BoxCollider>());
                 portal.SetActive(false);
                 police1.SetActive(true);
                 police2.SetActive(true);
