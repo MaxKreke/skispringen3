@@ -3355,15 +3355,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8543091255351050844, guid: 7aa055534cd316b4bb1498fca713c455, type: 3}
       propertyPath: spawnposition.x
-      value: -267
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8543091255351050844, guid: 7aa055534cd316b4bb1498fca713c455, type: 3}
       propertyPath: spawnposition.y
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8543091255351050844, guid: 7aa055534cd316b4bb1498fca713c455, type: 3}
       propertyPath: spawnposition.z
-      value: 0
+      value: -76
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aa055534cd316b4bb1498fca713c455, type: 3}
