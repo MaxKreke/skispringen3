@@ -28,6 +28,7 @@ public class Sword : MonoBehaviour
             RandomUnitVector();
             animationFrames = Mathf.RoundToInt(slashWidth * animationSpeed);
             attack = true;
+            GetComponent<AudioSource>().Play(0);
         }
         else
         {
