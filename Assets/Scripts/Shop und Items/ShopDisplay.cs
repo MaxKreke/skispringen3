@@ -101,7 +101,7 @@ public class ShopDisplay : MonoBehaviour
         }
     }
 
-    public void Klauen()
+    public bool Klauen()
     {
         if(own.inventory.Count > 0)
         {
@@ -112,8 +112,9 @@ public class ShopDisplay : MonoBehaviour
             }
             own.inventory.Clear();
             LoadInventory();
-            Debug.LogError("KLAUEN");
+            return true;
         }
+        return false;
     }
 
 }

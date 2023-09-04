@@ -57,7 +57,6 @@ public class Enemy : MonoBehaviour
             }
             else shootCooldown--;
         }
-
     }
 
 

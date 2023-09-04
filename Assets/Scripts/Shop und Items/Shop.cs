@@ -8,6 +8,9 @@ public class Shop : MonoBehaviour
     public GameObject shop;
     public GameObject pee;
     public GameObject criminalEnergy;
+    public GameObject portal;
+    public GameObject police1;
+    public GameObject police2;
 
     private void Start()
     {
@@ -38,10 +41,21 @@ public class Shop : MonoBehaviour
         {
             Terminal.ToggleCursor(false);
             Camera.main.gameObject.GetComponent<CameraRotation>().captureMouse = true;
-            shop.GetComponent<ShopDisplay>().Klauen();
+            if (shop.GetComponent<ShopDisplay>().Klauen())
+            {
+                Debug.LogError("Klauen");
+                portal.SetActive(false);
+                police1.SetActive(true);
+                police2.SetActive(true);
+            }
             shop.SetActive(false);
             canvas.SetActive(true);
         }
+    }
+
+    private void Update()
+    {
+        if (transform.childCount == 0) portal.SetActive(true);
     }
 
 }
