@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour
         
     }
 
-    void Spawn()
+    public void Spawn()
     {
         GameObject enemy = Instantiate(container.enemy[getIndex()],transform.position, Quaternion.identity);
         enemy.transform.parent = container.gameObject.transform;
@@ -29,6 +29,6 @@ public class Spawner : MonoBehaviour
 
     public int getIndex()
     {
-        return 0;
+        return tier+Terminal.Day-1;
     }
 }
