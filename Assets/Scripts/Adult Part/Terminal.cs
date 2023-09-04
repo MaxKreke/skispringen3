@@ -7,12 +7,13 @@ public class Terminal : MonoBehaviour
 {
     public GameObject activeLevel;
     public GameObject [] Levels;
+    public AudioClip[] ost; 
+
 
     public static int Day = 1;
     public static List<GameObject> friends = new List<GameObject>();
     public static bool handUnlocked = false;
     public static bool blastUnlocked = false;
-
     public static int hygiene = 5;
     public static int charisma = 5;
     public static int joy = 0;
