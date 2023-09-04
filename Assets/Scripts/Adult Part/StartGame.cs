@@ -9,7 +9,7 @@ public class StartGame : MonoBehaviour
     {
         if (other.gameObject.tag == "Character")
         {
-            SceneManager.LoadScene("Day");
+            SceneManager.LoadScene("PostTutorial");
         }
     }
 }
