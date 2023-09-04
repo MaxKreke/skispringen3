@@ -46,10 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   friendoName: Malboro
-  maxFriendship: 100
+  maxFriendship: 150
   currentFriendship: 0
-  maxPatience: 100
-  currentPatience: 100
+  maxPatience: 120
+  currentPatience: 120
   reduceStat: hygiene
   attack: blows cigarette smoke on you
   modifiers:

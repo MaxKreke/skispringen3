@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   friendoName: Herrmann
-  maxFriendship: 100
+  maxFriendship: 170
   currentFriendship: 0
   maxPatience: 100
   currentPatience: 100

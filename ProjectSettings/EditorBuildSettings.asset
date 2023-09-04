@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Battle Night.unity
     guid: 44d7666cbed1dcf43af717dd483d4b5c
+  - enabled: 1
+    path: Assets/Scenes/Endgame.unity
+    guid: 65cb212ecd2638d418bdad3082f03dce
   m_configObjects: {}

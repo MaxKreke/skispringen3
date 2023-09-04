@@ -130,10 +130,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   friendoName: Pregnant Bird
-  maxFriendship: 100
+  maxFriendship: 200
   currentFriendship: 0
-  maxPatience: 100
-  currentPatience: 100
+  maxPatience: 120
+  currentPatience: 120
   reduceStat: tomfoolery
   attack: talks about responsibility
   modifiers:

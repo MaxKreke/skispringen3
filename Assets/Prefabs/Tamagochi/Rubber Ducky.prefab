@@ -46,10 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   friendoName: Rubber Ducky
-  maxFriendship: 100
+  maxFriendship: 120
   currentFriendship: 0
-  maxPatience: 100
-  currentPatience: 100
+  maxPatience: 120
+  currentPatience: 120
   reduceStat: anger
   attack: makes squeaky sounds
   modifiers:

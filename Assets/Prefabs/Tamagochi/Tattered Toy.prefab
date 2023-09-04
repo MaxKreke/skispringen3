@@ -130,10 +130,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   friendoName: Tattered Toy
-  maxFriendship: 100
+  maxFriendship: 120
   currentFriendship: 0
-  maxPatience: 100
-  currentPatience: 100
+  maxPatience: 120
+  currentPatience: 120
   reduceStat: joy
   attack: makes you sad
   modifiers:

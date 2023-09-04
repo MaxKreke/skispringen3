@@ -46,10 +46,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   friendoName: "Freibeuter M\xE4userich"
-  maxFriendship: 100
+  maxFriendship: 150
   currentFriendship: 0
-  maxPatience: 100
-  currentPatience: 100
+  maxPatience: 120
+  currentPatience: 120
   reduceStat: charisma
   attack: tears your clothes to tatters
   modifiers:
