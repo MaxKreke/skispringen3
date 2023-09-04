@@ -3657,8 +3657,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e39fb643054a40f4eadc1dfde6a5e65a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tier: 0
-  container: {fileID: 610264465}
+  container: {fileID: 0}
+  enemies:
+  - {fileID: 6819567779124813063, guid: 763be93d9cf132f40af0fd30d0b8249b, type: 3}
+  - {fileID: 8489695503204362622, guid: 50e9d772324124e41b973b28707864c0, type: 3}
+  - {fileID: 3037371058579538409, guid: 793edf40f8b04f4448ac035301c5256c, type: 3}
 --- !u!1 &1791183859
 GameObject:
   m_ObjectHideFlags: 0
