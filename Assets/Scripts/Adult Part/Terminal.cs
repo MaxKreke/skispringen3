@@ -20,10 +20,12 @@ public class Terminal : MonoBehaviour
     public static int empathy = 0;
     public static int will = 0;
     public static int anger = 0;
-    public static bool levelCleared = true;
+    public static bool levelCleared = false;
+    public static int Money = 10;
 
     void Start()
     {
+        Terminal.levelCleared = false;
         Terminal.ToggleCursor(false);
         Application.targetFrameRate = 120;
     }

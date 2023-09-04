@@ -90,6 +90,7 @@ public class ShopDisplay : MonoBehaviour
         if(cost <= player.Money)
         {
             player.Money -= cost;
+            Terminal.Money -= cost;
             cost = 0;
             foreach(Item item in own.inventory)
             {
@@ -104,6 +105,7 @@ public class ShopDisplay : MonoBehaviour
     {
         if(own.inventory.Count > 0)
         {
+            cost = 0;
             foreach (Item item in own.inventory)
             {
                 player.AddItem(item);

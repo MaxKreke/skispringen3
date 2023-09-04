@@ -10,6 +10,7 @@ public class Inventory : MonoBehaviour
 
     void Start()
     {
+        Money = Terminal.Money;
         ws = GetComponent<Weaponswitch>();
     }
 
@@ -27,6 +28,7 @@ public class Inventory : MonoBehaviour
         if (item.MoneyValue > 0)
         {
             Money += item.MoneyValue;
+            Terminal.Money += item.MoneyValue;
             return;
         }
         if (item.Pee)
