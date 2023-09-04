@@ -7,7 +7,7 @@ public class Terminal : MonoBehaviour
 {
     public GameObject activeLevel;
     public GameObject [] Levels;
-    public AudioClip[] ost; 
+    private AudioSource[] ost;
 
 
     public static int Day = 1;
@@ -27,6 +27,7 @@ public class Terminal : MonoBehaviour
 
     void Start()
     {
+        ost = GetComponents<AudioSource>();
         Terminal.levelCleared = false;
         Terminal.ToggleCursor(false);
         Application.targetFrameRate = 120;
@@ -98,6 +99,15 @@ public class Terminal : MonoBehaviour
     public void EndDay()
     {
         SceneManager.LoadScene("Battle Night");
+    }
+
+    public void PlaySound(int i)
+    {
+        for(int j = 0; j < ost.Length; j++)
+        {
+            ost[j].volume = 0;
+        }
+        ost[i].volume = 1;
     }
 
 }

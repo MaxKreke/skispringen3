@@ -8,14 +8,15 @@ public class Arena : MonoBehaviour
 
     public void StartWave()
     {
+        Debug.Log(waveCount);
         if (waveCount > 0)
         {
+            waveCount = 0;
             foreach(Transform t in gameObject.transform)
             {
                 Spawner spawner = t.gameObject.GetComponent<Spawner>();
                 if(spawner!=null)spawner.Spawn();
             }
-            waveCount = 0;
         }
     }
 }
