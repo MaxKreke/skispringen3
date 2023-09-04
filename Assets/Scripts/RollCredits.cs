@@ -5,7 +5,7 @@ using UnityEngine;
 public class RollCredits : MonoBehaviour
 {
 
-    public int frames = 10000;
+    public int frames = 100;
     private RectTransform ownRect;
 
     private void Start()
@@ -17,12 +17,13 @@ public class RollCredits : MonoBehaviour
     {
         if(frames > 0)
         {
+            Debug.Log(frames);
             ownRect.anchoredPosition+= Vector2.up;
             frames--;
         }
         else
         {
-            Debug.LogError("END");
+            Application.Quit();
         }
 
     }

@@ -18847,7 +18847,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeLevel: {fileID: 0}
   Levels: []
-  ost: []
 --- !u!4 &1161102929
 Transform:
   m_ObjectHideFlags: 0
@@ -21848,7 +21847,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -26867,7 +26866,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -1500}
-  m_SizeDelta: {x: 600, y: 2000}
+  m_SizeDelta: {x: 1000, y: 2000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1513123255
 MonoBehaviour:
@@ -26889,16 +26888,24 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Contrary to popular belief,\n Lorem Ipsum is not simply\n random text.
-    It has roots\n in a piece of classical \nLatin literature from 45 \nBC, making
-    it over 2000\n years old. Richard \nMcClintock, a Latin professor\n at Hampden-Sydney
-    \nCollege in Virginia, looked \nup one of the more obscure Latin words, consectetur,
-    from a Lorem Ipsum passage, and going through the cites of the word in classical
-    literature, discovered the undoubtable source. Lorem Ipsum comes from sections
-    1.10.32 and 1.10.33 of \"de Finibus Bonorum et Malorum\" (The Extremes of Good
-    and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory
-    of ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
-    \"Lorem ipsum dolor sit amet..\", comes from a line in section 1.10.32."
+  m_text: "A Game by\r\n\r\nBeinlose Buben\r\n\r\nMax\t\t\t                                             
+    Computerman\nNico Ramon Kleeman\t      Designer of Ass, and other things\r\nArmin
+    Niklas Grossmann\t\t   Asstastic Assistant of Design\r\nLuca\t\t\t\t                                
+    Lead Composer\r\n\rMarcel, der Rote                                           
+    Pokemon Meister\nDennis                                                                
+    Zitzenschlitzer\n\n\r\n\r\n\r\nIn collaboration with\r\n\r\nPasta Man Productions\r\n\r\nJacket
+    Pasta\t\t\tPresident\r\nFeisty Consulter\t\t\tVice President\r\n\r\n\r\nPasta
+    Studios London\r\n\r\nJonathan S.T. Marth\t    \t\t                   Studio
+    Head\r\n\r\nJohnny Marth\t\t\tLevel Design, Creative Writing\r\n\r\n\r\nvoices
+    by:\r\n\r\nJohnny Marth\t\t\t                                    Narrator\r\nJustin
+    Jane     Drill Sergeant, Special Ops, Chemtrailer, Gunna\t          (all sadly
+    unused)\nPampelmuse\t\t\t       Chinese Emperor Penguin (sadly unused)\nNico
+    Ramon Kleeman\t          \tTamagotchi (sadly unused)\r\n\r\n\r\n\r\n\r\nThank
+    you for playing this (somewhat unfinished) game\r\n\r\n\r\n\r\n\r\n\r\nwe love
+    you\r\n\r\n\r\n\r\n\r\n\r\nplatonically\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nunless
+    you can maybe imagine something more\r\n\r\n\r\n\r\n\r\n\r\n\r\nmaybe I\u2019m
+    rushing this\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nlet\u2019s just be friends for now
+    and see where things go"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -26987,7 +26994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07106aa16e36e1a4ca2ec1e6990750a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frames: 10000
+  frames: 4000
 --- !u!1 &1514544959
 GameObject:
   m_ObjectHideFlags: 0
