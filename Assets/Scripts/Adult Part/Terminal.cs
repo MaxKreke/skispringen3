@@ -96,7 +96,7 @@ public class Terminal : MonoBehaviour
 
     public void EndDay()
     {
-        //SceneManager.LoadScene("Battle Night");
+        SceneManager.LoadScene("Battle Night");
     }
 
 }
