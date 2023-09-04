@@ -28,6 +28,21 @@ public class Terminal : MonoBehaviour
         Terminal.levelCleared = false;
         Terminal.ToggleCursor(false);
         Application.targetFrameRate = 120;
+
+        if(Terminal.Day == 4)
+        {
+            playCredits();
+        }
+    }
+
+    public void playCredits()
+    {
+        GameObject fc = GameObject.Find("FriendContainer");
+        for(int i = 0; i < Terminal.friends.Count; i++)
+        {
+            Instantiate(Terminal.friends[i], fc.transform.position + new Vector3((4*i)-5f, 1, 0), Quaternion.identity);
+        }
+        Debug.Log("credits");
     }
 
     public void SelectActiveLevel(GameObject level, GameObject player)

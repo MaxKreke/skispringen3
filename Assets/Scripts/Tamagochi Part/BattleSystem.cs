@@ -200,7 +200,8 @@ public class BattleSystem : MonoBehaviour
             dialogueText.text = friend.friendoName + " is fed up with you and goes home...  :()";
         }
         Terminal.Day++;
-        SceneManager.LoadScene("Day");
+        if(Terminal.Day < 4)SceneManager.LoadScene("Day");
+        else SceneManager.LoadScene("Endgame");
     }
 
     IEnumerator EnemyTurn()
