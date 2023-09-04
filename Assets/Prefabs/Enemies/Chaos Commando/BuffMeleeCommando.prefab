@@ -109,7 +109,7 @@ MonoBehaviour:
   isFlying: 0
   isShooting: 0
   projectile: {fileID: 0}
-  item: {fileID: 1816328609565145087, guid: 0e73affc66a51b54fa780735d2d47445, type: 3}
+  item: {fileID: 1816328609565145087, guid: 6ec2b02a74b5e87459b6bda704a9a6a4, type: 3}
   shootingSpeed: 0
 --- !u!114 &8489695503204362620
 MonoBehaviour:

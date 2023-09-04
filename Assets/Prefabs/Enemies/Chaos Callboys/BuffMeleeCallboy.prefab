@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 8489695503204362621}
   - component: {fileID: 8489695503204362620}
   - component: {fileID: 5444834249714250238}
-  - component: {fileID: -3969923967860824948}
+  - component: {fileID: -5896727511422202203}
   m_Layer: 6
-  m_Name: BuffMeleeClown
+  m_Name: BuffMeleeCallboy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65,7 +65,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7a7bc9974bb1f624ca53fdca21e1a7f5, type: 2}
+  - {fileID: 2100000, guid: 96addc393b8b58d49919d572a6ad691a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 500
-  defaultMaterial: {fileID: 2100000, guid: 7a7bc9974bb1f624ca53fdca21e1a7f5, type: 2}
-  damageMaterial: {fileID: 2100000, guid: 228fba6eebecefb41965c334b67ef06b, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 96addc393b8b58d49919d572a6ad691a, type: 2}
+  damageMaterial: {fileID: 2100000, guid: 2cd9b3df2692ee4469e325612ad0d2d7, type: 2}
   policeAnimationMaterial: {fileID: 0}
   target: {fileID: 0}
   movementSpeed: 0.035
@@ -109,7 +109,7 @@ MonoBehaviour:
   isFlying: 0
   isShooting: 0
   projectile: {fileID: 0}
-  item: {fileID: 1816328609565145087, guid: ac63c04479c233c489e39df632279260, type: 3}
+  item: {fileID: 1816328609565145087, guid: cdb29d8ba58ba9e4f9e5139e11a0fd39, type: 3}
   shootingSpeed: 0
 --- !u!114 &8489695503204362620
 MonoBehaviour:
@@ -134,9 +134,9 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 2, z: 10}
+  m_Size: {x: 6, y: 2, z: 9}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &-3969923967860824948
+--- !u!54 &-5896727511422202203
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

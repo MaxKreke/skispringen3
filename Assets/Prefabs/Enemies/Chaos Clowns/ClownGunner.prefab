@@ -102,12 +102,14 @@ MonoBehaviour:
   HP: 300
   defaultMaterial: {fileID: 2100000, guid: 6798df9c61b40d14eba2e34189a366f4, type: 2}
   damageMaterial: {fileID: 2100000, guid: 6c3997aa9ce65dd489f4e7f2215dae3b, type: 2}
+  policeAnimationMaterial: {fileID: 0}
   target: {fileID: 0}
   movementSpeed: 0.01
   isAgressive: 1
   isFlying: 0
   isShooting: 1
   projectile: {fileID: 2056563815088195960, guid: 1b55e11f4369acf41a9f9ba5ee8121eb, type: 3}
+  item: {fileID: 1816328609565145087, guid: 55ac17aa847dfa94a8d12818ee6715b9, type: 3}
   shootingSpeed: 100
 --- !u!114 &6177980573843148120
 MonoBehaviour:
