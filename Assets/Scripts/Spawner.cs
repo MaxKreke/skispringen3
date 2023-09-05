@@ -22,6 +22,7 @@ public class Spawner : MonoBehaviour
 
     public void Spawn()
     {
+        if (enemies[getIndex()] == null) return;
         GameObject enemy = Instantiate(enemies[getIndex()],transform.position, Quaternion.identity);
         enemy.transform.parent = container.gameObject.transform;
 
