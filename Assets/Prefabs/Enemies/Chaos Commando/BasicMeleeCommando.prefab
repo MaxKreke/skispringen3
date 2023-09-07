@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6819567779124813057}
   - component: {fileID: 3523799178547594666}
   - component: {fileID: 7650211038091092409}
+  - component: {fileID: 5806101468792958004}
   m_Layer: 6
   m_Name: BasicMeleeCommando
   m_TagString: Enemy
@@ -145,10 +146,26 @@ Rigidbody:
   m_GameObject: {fileID: 6819567779124813063}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 0.1
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5806101468792958004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6819567779124813063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df2cf97209eea624e99a3d67d4730676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 1cb1f2f5744ad4144a781c6083206a3e, type: 3}
+  - {fileID: 8300000, guid: af22d7af9a55a3742b441cf424265f88, type: 3}
+  - {fileID: 8300000, guid: 0c928f674610b104c971e53e40462398, type: 3}
