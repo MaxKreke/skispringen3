@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 8489695503204362620}
   - component: {fileID: 5444834249714250238}
   - component: {fileID: -5896727511422202203}
+  - component: {fileID: 5115177304955905763}
   m_Layer: 6
   m_Name: BuffMeleeCallboy
   m_TagString: Enemy
@@ -152,3 +153,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5115177304955905763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8489695503204362622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df2cf97209eea624e99a3d67d4730676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 7d54a45667f7c7b47bc69663eb2b8405, type: 3}
+  - {fileID: 8300000, guid: 78496c7142d66f940bf411693a68c7e4, type: 3}
+  - {fileID: 8300000, guid: 1e420182c9f5e794a9ed7881c2104722, type: 3}
