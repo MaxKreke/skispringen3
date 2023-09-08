@@ -6,15 +6,21 @@ public class SlashEnemy : MonoBehaviour
 {
 
     public Sword sword;
+    public LayerMask enemyLayer;
 
-    private void OnTriggerStay(Collider other)
+    private void Update()
     {
-        if (other.gameObject.tag == "Enemy")
+        Collider[] hits = Physics.OverlapBox(transform.position, GetComponent<BoxCollider>().size/1.8f, transform.rotation, enemyLayer);
+        List<Enemy> enemies = new List<Enemy>();
+        foreach (Collider other in hits)
         {
-            Enemy enemy = other.gameObject.GetComponent<Enemy>();
-            sword.hitEnemy(enemy);
+            if (other.gameObject.tag == "Enemy")
+            {
+                Enemy enemy = other.gameObject.GetComponent<Enemy>();
+                if(enemy) enemies.Add(enemy);
+            }
         }
-
+        sword.hitEnemies(enemies);
     }
 
 }

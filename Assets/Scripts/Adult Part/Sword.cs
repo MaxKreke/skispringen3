@@ -59,4 +59,11 @@ public class Sword : MonoBehaviour
         attack= false;
     }
 
+    public void hitEnemies(List<Enemy> enemies)
+    {
+        if (!attack) return;
+        foreach (Enemy enemy in enemies) enemy.Bleed(10f);
+        attack = false;
+    }
+
 }

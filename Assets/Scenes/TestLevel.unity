@@ -4861,6 +4861,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sword: {fileID: 1496046759}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &2108375138
 GameObject:
   m_ObjectHideFlags: 0
