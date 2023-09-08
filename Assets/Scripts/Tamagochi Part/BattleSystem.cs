@@ -193,11 +193,13 @@ public class BattleSystem : MonoBehaviour
         {
             dialogueText.text = "You and " + friend.friendoName + " are now friends! :)";
             Terminal.friends.Add(friendPrefab);
+            Terminal.success = true;
 
         }
         else if (state == BattleState.LOST)
         {
             dialogueText.text = friend.friendoName + " is fed up with you and goes home...  :()";
+            Terminal.success = false;
         }
         Terminal.Day++;
         if(Terminal.Day < 4)SceneManager.LoadScene("Day");

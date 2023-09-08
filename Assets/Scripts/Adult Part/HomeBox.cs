@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HomeBox : MonoBehaviour
 {
+    public TamagochiVoice voice;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Character")
@@ -20,6 +21,11 @@ public class HomeBox : MonoBehaviour
                 Terminal.empathy += item.Empathy;
             }
             playerinv.inventory.Clear();
+            if (Terminal.levelCleared)
+            {
+                voice.ReturnHome();
+            }
+
         }
     }
 }

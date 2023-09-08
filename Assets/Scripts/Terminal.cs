@@ -11,6 +11,7 @@ public class Terminal : MonoBehaviour
 
 
     public static int Day = 1;
+    public static bool success;
     public static List<GameObject> friends = new List<GameObject>();
     public static bool handUnlocked = false;
     public static bool blastUnlocked = false;
