@@ -11,6 +11,7 @@ public class Shop : MonoBehaviour
     public GameObject portal;
     public GameObject police1;
     public GameObject police2;
+    public GameObject enemyContainer;
 
     private void Start()
     {
@@ -47,6 +48,8 @@ public class Shop : MonoBehaviour
                 portal.SetActive(false);
                 police1.SetActive(true);
                 police2.SetActive(true);
+                police1.transform.SetParent(enemyContainer.transform);
+                police1.transform.SetParent(enemyContainer.transform);
             }
             shop.SetActive(false);
             canvas.SetActive(true);
