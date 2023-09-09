@@ -34,6 +34,7 @@ public class Grapplendix : MonoBehaviour
             RaycastHit hit;
             if (Physics.Raycast(ownCamera.transform.position, ownCamera.transform.TransformDirection(Vector3.forward), out hit, maximalDistanz, boxLayers))
             {
+                if (hit.transform.gameObject.layer != 12) return;
                 target = hit.point;
                 joint = parentAdult.AddComponent<SpringJoint>();
                 joint.autoConfigureConnectedAnchor = false;

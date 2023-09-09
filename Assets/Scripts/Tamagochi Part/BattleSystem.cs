@@ -143,6 +143,8 @@ public class BattleSystem : MonoBehaviour
         if (isdead)
         {
             state = BattleState.WON;
+            DisplayBattleResult();
+            yield return new WaitUntil(WaitOrClick);
             EndBattle();
         }
         
@@ -175,6 +177,8 @@ public class BattleSystem : MonoBehaviour
             if (isdead)
             {
                 state = BattleState.WON;
+                DisplayBattleResult();
+                yield return new WaitUntil(WaitOrClick);
                 EndBattle();
             }
             else
@@ -185,9 +189,7 @@ public class BattleSystem : MonoBehaviour
         }
     }
 
-
-    // Hier endet das Battle und eine neue Szene beginnt
-    void EndBattle()
+    void DisplayBattleResult()
     {
         if (state == BattleState.WON)
         {
@@ -201,7 +203,13 @@ public class BattleSystem : MonoBehaviour
             dialogueText.text = friend.friendoName + " is fed up with you and goes home...  :()";
             Terminal.success = false;
         }
+    }
+
+    // Hier endet das Battle und eine neue Szene beginnt
+    void EndBattle()
+    {
         Terminal.Day++;
+
         if(Terminal.Day < 4)SceneManager.LoadScene("Day");
         else SceneManager.LoadScene("Endgame");
     }
@@ -227,6 +235,8 @@ public class BattleSystem : MonoBehaviour
         if (patienceGone)
         {
             state = BattleState.LOST;
+            DisplayBattleResult();
+            yield return new WaitUntil(WaitOrClick);
             EndBattle();
         }
         else
