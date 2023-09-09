@@ -17,13 +17,6 @@ public class Shop : MonoBehaviour
     private void Start()
     {
         terminal = GameObject.Find("Terminal").GetComponent<Terminal>();
-        if (Terminal.blastUnlocked) return;
-        if (Terminal.handUnlocked)
-        {
-            GetComponent<Inventory>().inventory.Insert(0,criminalEnergy.GetComponent<Item>());
-            return;
-        }
-        GetComponent<Inventory>().inventory.Insert(0,pee.GetComponent<Item>());
     }
 
     private void OnTriggerEnter(Collider other)

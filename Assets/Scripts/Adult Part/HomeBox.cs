@@ -5,8 +5,18 @@ using UnityEngine;
 public class HomeBox : MonoBehaviour
 {
     public TamagochiVoice voice;
+    public GameObject pee;
+    public GameObject criminalEnergy;
+    private bool visited;
+
+    private void Start()
+    {
+        visited = false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
+        if (visited) return;
         if (other.gameObject.tag == "Character")
         {
             Inventory playerinv = other.gameObject.GetComponent<Inventory>();
@@ -21,11 +31,16 @@ public class HomeBox : MonoBehaviour
                 Terminal.empathy += item.Empathy;
             }
             playerinv.inventory.Clear();
-            if (Terminal.levelCleared)
+            if (!Terminal.levelCleared) return;
+            voice.ReturnHome();
+            if (Terminal.blastUnlocked) return;
+            if (Terminal.handUnlocked)
             {
-                voice.ReturnHome();
+                criminalEnergy.SetActive(true);
+                return;
             }
-
+            pee.SetActive(true);
+            visited = true;
         }
     }
 }

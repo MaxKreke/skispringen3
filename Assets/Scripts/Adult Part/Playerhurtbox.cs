@@ -6,6 +6,11 @@ public class Playerhurtbox : MonoBehaviour
 {
     public Movement player;
 
+    public void Update()
+    {
+        transform.position = transform.parent.position+Vector3.up*.1f;
+    }
+
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Enemy")
