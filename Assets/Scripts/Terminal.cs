@@ -7,8 +7,8 @@ public class Terminal : MonoBehaviour
 {
     public GameObject activeLevel;
     public GameObject [] Levels;
+    public AudioClip[] clips;
     private AudioSource[] ost;
-
 
     public static int Day = 1;
     public static bool success;
@@ -58,13 +58,31 @@ public class Terminal : MonoBehaviour
         if (enteredLevel != null) Terminal.SetRespawn(enteredLevel.spawnpoint, player);
 
         //Other levels go
-        foreach(GameObject levelNumber in Levels)
+        for(int i = 0; i < Levels.Length; i++)
         {
+            GameObject levelNumber = Levels[i];
             if(level != levelNumber)
             {
                 levelNumber.GetComponent<Level>().Woosh();
             }
+            else
+            {
+                if (!ost[0].isPlaying)
+                {
+                    ost[0].clip = clips[2 * i];
+                    ost[0].Play();
+                }
+                if (!ost[1].isPlaying)
+                {
+                    ost[1].clip = clips[2 * i+1];
+                    ost[1].volume = 0f;
+                    ost[1].Play();
+                }
+                ost[2].Play();
+                ost[3].Play();
+            }
         }
+
     }
 
     public int GetActiveLevel()
@@ -110,5 +128,37 @@ public class Terminal : MonoBehaviour
         }
         ost[i].volume = 1;
     }
+
+    public void CombatMusic(bool combat)
+    {
+        if (combat)
+        {
+            ost[0].volume = 0f;
+            ost[1].volume = 1f;
+            ost[2].volume = 0f;
+        }
+        else
+        {
+            ost[0].volume = 1f;
+            ost[1].volume = 0f;
+            ost[2].volume = 0f;
+        }
+    }
+
+    public void ShopMusic()
+    {
+        ost[0].volume = 0f;
+        ost[1].volume = 0f;
+        ost[2].volume = 1f;
+    }
+
+    public void PoliceMusic()
+    {
+        ost[0].volume = 0f;
+        ost[1].volume = 0f;
+        ost[2].volume = 0f;
+        ost[3].volume = 1f;
+    }
+
 
 }

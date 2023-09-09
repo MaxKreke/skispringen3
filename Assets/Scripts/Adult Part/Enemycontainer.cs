@@ -4,13 +4,5 @@ using UnityEngine;
 
 public class Enemycontainer : MonoBehaviour
 {
-
     public GameObject [] enemy;
-
-    void Update()
-    {
-        
-    }
-
-
 }

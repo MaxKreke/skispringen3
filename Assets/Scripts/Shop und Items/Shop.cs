@@ -12,9 +12,11 @@ public class Shop : MonoBehaviour
     public GameObject police1;
     public GameObject police2;
     public GameObject enemyContainer;
+    private Terminal terminal;
 
     private void Start()
     {
+        terminal = GameObject.Find("Terminal").GetComponent<Terminal>();
         if (Terminal.blastUnlocked) return;
         if (Terminal.handUnlocked)
         {
@@ -33,6 +35,7 @@ public class Shop : MonoBehaviour
             shop.SetActive(true);
             shop.GetComponent<ShopDisplay>().shop = GetComponent<Inventory>();
             canvas.SetActive(false);
+            terminal.ShopMusic();
         }
     }
 
@@ -50,6 +53,11 @@ public class Shop : MonoBehaviour
                 police2.SetActive(true);
                 police1.transform.SetParent(enemyContainer.transform);
                 police1.transform.SetParent(enemyContainer.transform);
+                terminal.PoliceMusic();
+            }
+            else
+            {
+                terminal.CombatMusic(false);
             }
             shop.SetActive(false);
             canvas.SetActive(true);
