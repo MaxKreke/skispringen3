@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7f0a5596063e134895e35a61c4f36b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 500
+  HP: 400
   defaultMaterial: {fileID: 2100000, guid: 069085483be3186418cc998097af4f43, type: 2}
   damageMaterial: {fileID: 2100000, guid: dc4802a16232c1e4e9328336287d423a, type: 2}
   policeAnimationMaterial: {fileID: 0}

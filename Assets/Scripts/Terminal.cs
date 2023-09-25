@@ -70,6 +70,7 @@ public class Terminal : MonoBehaviour
                 if (!ost[0].isPlaying)
                 {
                     ost[0].clip = clips[2 * i];
+                    ost[0].volume = .2f;
                     ost[0].Play();
                 }
                 if (!ost[1].isPlaying)
@@ -124,9 +125,9 @@ public class Terminal : MonoBehaviour
     {
         for(int j = 0; j < ost.Length; j++)
         {
-            ost[j].volume = 0;
+            ost[j].volume = 0f;
         }
-        ost[i].volume = 1;
+        ost[i].volume = .2f;
     }
 
     public void CombatMusic(bool combat)
@@ -134,12 +135,12 @@ public class Terminal : MonoBehaviour
         if (combat)
         {
             ost[0].volume = 0f;
-            ost[1].volume = 1f;
+            ost[1].volume = .2f;
             ost[2].volume = 0f;
         }
         else
         {
-            ost[0].volume = 1f;
+            ost[0].volume = .2f;
             ost[1].volume = 0f;
             ost[2].volume = 0f;
         }
@@ -149,7 +150,7 @@ public class Terminal : MonoBehaviour
     {
         ost[0].volume = 0f;
         ost[1].volume = 0f;
-        ost[2].volume = 1f;
+        ost[2].volume = .2f;
     }
 
     public void PoliceMusic()
@@ -157,7 +158,7 @@ public class Terminal : MonoBehaviour
         ost[0].volume = 0f;
         ost[1].volume = 0f;
         ost[2].volume = 0f;
-        ost[3].volume = 1f;
+        ost[3].volume = .2f;
     }
 
 

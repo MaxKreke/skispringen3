@@ -45,7 +45,7 @@ public class Shop : MonoBehaviour
                 police1.SetActive(true);
                 police2.SetActive(true);
                 police1.transform.SetParent(enemyContainer.transform);
-                police1.transform.SetParent(enemyContainer.transform);
+                police2.transform.SetParent(enemyContainer.transform);
                 terminal.PoliceMusic();
             }
             else

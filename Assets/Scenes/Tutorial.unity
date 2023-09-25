@@ -2155,7 +2155,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: ee374671476160b48b81656aefde8663, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3474,7 +3474,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 2f524018e7ea097479365a8d358d02cf, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -4219,6 +4219,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  clips: []
 --- !u!4 &1826704111
 Transform:
   m_ObjectHideFlags: 0
@@ -4636,6 +4637,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sword: {fileID: 1496046759}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &2123218814
 GameObject:
   m_ObjectHideFlags: 0
@@ -4915,3 +4919,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   beforeYouLeave: {fileID: 8300000, guid: 0c8f15382e1d7414e9de2bf26546a4d9, type: 3}
   narrator: {fileID: 1111445880}
+  triggered: 0

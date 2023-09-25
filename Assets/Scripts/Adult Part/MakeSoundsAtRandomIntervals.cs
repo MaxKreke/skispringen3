@@ -23,7 +23,7 @@ public class MakeSoundsAtRandomIntervals : MonoBehaviour
         else
         {
             int randomIndex = Random.Range(0, clips.Length);
-            AudioSource.PlayClipAtPoint(clips[randomIndex], transform.position);
+            AudioSource.PlayClipAtPoint(clips[randomIndex], transform.position, 1f);
             countdown = Random.Range(720, 15120);
         }
     }

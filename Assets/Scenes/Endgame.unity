@@ -18847,6 +18847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeLevel: {fileID: 0}
   Levels: []
+  clips: []
 --- !u!4 &1161102929
 Transform:
   m_ObjectHideFlags: 0
@@ -21845,7 +21846,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8406a66ad2d5d094e9c138cf734b53e6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -34462,6 +34463,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa2d22f47560ad04684dd3c812c23c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  voice: {fileID: 0}
+  pee: {fileID: 0}
+  criminalEnergy: {fileID: 0}
 --- !u!1 &1881203225
 GameObject:
   m_ObjectHideFlags: 0
